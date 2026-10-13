@@ -1,7 +1,7 @@
 from fastapi import APIRouter, HTTPException, Query
 from typing import List, Optional
-from backend.app.schemas.dataset import DatasetRecord, DatasetQueryFilter
-from backend.app.dataset.manager import dataset_manager
+from app.schemas.dataset import DatasetRecord, DatasetQueryFilter
+from app.dataset.manager import dataset_manager
 
 router = APIRouter(prefix="/dataset")
 
