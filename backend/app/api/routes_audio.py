@@ -1,11 +1,11 @@
 from fastapi import APIRouter, UploadFile, File, HTTPException
 from fastapi.responses import FileResponse
 from pathlib import Path
-from backend.app.core.config import settings
-from backend.app.core.logging import logger
-from backend.app.schemas.audio import AudioUploadResponse
-from backend.app.audio_processing.loader import load_audio, AudioLoadError
-from backend.app.services.storage_service import storage_service
+from app.core.config import settings
+from app.core.logging import logger
+from app.schemas.audio import AudioUploadResponse
+from app.audio_processing.loader import load_audio, AudioLoadError
+from app.services.storage_service import storage_service
 
 router = APIRouter(prefix="/audio")
 
