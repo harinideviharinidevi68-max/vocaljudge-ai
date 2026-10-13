@@ -1,0 +1,5870 @@
+{
+  "analysis_id": "analysis-792ddfe3e7",
+  "status": "completed",
+  "created_at": "2026-10-13T15:26:59.870905+00:00",
+  "transcript": "We must remember that speech is not mere words, but the living expression of thought and character.",
+  "speech_category": "Persuasive Oratory",
+  "alignment_method": "acoustic_dtw_energy_guided",
+  "rubric_version": "1.0.0",
+  "overall_score": 90.1,
+  "category_scores": {
+    "pacing": 24.9,
+    "pitch_variation": 10.3,
+    "pauses": 19.9,
+    "energy": 20.0,
+    "clarity": 15.0
+  },
+  "rubric_evaluation": {
+    "rubric_version": "1.0.0",
+    "overall_score": 90.1,
+    "category_scores": {
+      "pacing": 24.9,
+      "pitch_variation": 10.3,
+      "pauses": 19.9,
+      "energy": 20.0,
+      "clarity": 15.0
+    },
+    "details": {
+      "pacing": {
+        "category_key": "pacing",
+        "category_name": "Pacing & Rhythm",
+        "max_score": 25.0,
+        "score": 24.9,
+        "percentage": 99.6,
+        "deductions": 0.05,
+        "formula": "score = 25 - min(25, macro_tempo_penalty + sum(local_rate_flaws))",
+        "contributing_measurements": {
+          "reference_wpm": 145.5,
+          "participant_wpm": 145.0,
+          "wpm_ratio": 1.0,
+          "detected_pacing_flaws": 0
+        },
+        "status": "computed"
+      },
+      "pitch_variation": {
+        "category_key": "pitch_variation",
+        "category_name": "Pitch & Vocal Variation",
+        "max_score": 20.0,
+        "score": 10.3,
+        "percentage": 51.5,
+        "deductions": 9.67,
+        "formula": "score = 20 - min(20, semitone_range_deficit + sum(monotone_flaws))",
+        "contributing_measurements": {
+          "reference_semitone_range": 3.06,
+          "participant_semitone_range": 0.1,
+          "semitone_ratio": 0.03,
+          "monotone_flaw_count": 0
+        },
+        "status": "computed"
+      },
+      "pauses": {
+        "category_key": "pauses",
+        "category_name": "Pauses & Timing",
+        "max_score": 20.0,
+        "score": 19.9,
+        "percentage": 99.5,
+        "deductions": 0.08,
+        "formula": "score = 20 - min(20, pause_ratio_discrepancy + sum(excessive_pause_flaws))",
+        "contributing_measurements": {
+          "reference_pause_ratio": 0.154,
+          "participant_pause_ratio": 0.151,
+          "total_participant_pauses": 3,
+          "excessive_pause_count": 0
+        },
+        "status": "computed"
+      },
+      "energy": {
+        "category_key": "energy",
+        "category_name": "Energy & Emphasis",
+        "max_score": 20.0,
+        "score": 20.0,
+        "percentage": 100.0,
+        "deductions": 0.02,
+        "formula": "score = 20 - min(20, dynamic_contrast_deficit + sum(energy_flaws))",
+        "contributing_measurements": {
+          "reference_energy_std": 0.0947,
+          "participant_energy_std": 0.0945,
+          "energy_variation_ratio": 1.0,
+          "energy_flaw_count": 0
+        },
+        "status": "computed"
+      },
+      "clarity": {
+        "category_key": "clarity",
+        "category_name": "Clarity & Intelligibility",
+        "max_score": 15.0,
+        "score": 15.0,
+        "percentage": 100.0,
+        "deductions": 0.0,
+        "formula": "score = 15 - spectral_brightness_clarity_deficit (provisional acoustic proxy)",
+        "contributing_measurements": {
+          "reference_centroid_hz": 2009.3,
+          "participant_centroid_hz": 1858.5,
+          "centroid_ratio": 0.92
+        },
+        "status": "provisional"
+      }
+    },
+    "methodology_notes": [
+      "Rubric Version 1.0.0 applied with deterministic acoustic rules.",
+      "Scores are computed relative to reference performance of identical transcript.",
+      "Clarity score is a provisional acoustic spectral brightness proxy and not an ASR word-error-rate evaluation."
+    ]
+  },
+  "reference_audio_id": "sample_reference.wav",
+  "participant_audio_id": "sample_monotone_pitch.wav",
+  "reference_audio_url": "/api/audio/stream/sample_reference.wav",
+  "participant_audio_url": "/api/audio/stream/sample_monotone_pitch.wav",
+  "reference_duration": 8.289,
+  "participant_duration": 8.289,
+  "features": {
+    "reference": {
+      "summary": {
+        "duration_seconds": 8.289,
+        "estimated_wpm": 145.5,
+        "total_pauses": 3,
+        "pause_time_ratio": 0.154,
+        "mean_pitch_hz": 151.8,
+        "std_pitch_hz": 12.0,
+        "pitch_semitone_range": 3.06,
+        "mean_rms_energy": 0.1547,
+        "std_rms_energy": 0.0947,
+        "mean_spectral_centroid_hz": 2009.3,
+        "mean_zero_crossing_rate": 0.1759
+      },
+      "timeseries": [
+        {
+          "time": 0.0,
+          "pitch_hz": 132.3,
+          "rms_energy": 0.1166,
+          "speaking_rate_wpm": 136.7,
+          "is_pause": false,
+          "spectral_centroid_hz": 1014.6
+        },
+        {
+          "time": 0.023,
+          "pitch_hz": 133.2,
+          "rms_energy": 0.1665,
+          "speaking_rate_wpm": 134.6,
+          "is_pause": false,
+          "spectral_centroid_hz": 1060.4
+        },
+        {
+          "time": 0.046,
+          "pitch_hz": 134.0,
+          "rms_energy": 0.2042,
+          "speaking_rate_wpm": 159.0,
+          "is_pause": false,
+          "spectral_centroid_hz": 1095.0
+        },
+        {
+          "time": 0.07,
+          "pitch_hz": 135.0,
+          "rms_energy": 0.2308,
+          "speaking_rate_wpm": 156.6,
+          "is_pause": false,
+          "spectral_centroid_hz": 1127.8
+        },
+        {
+          "time": 0.093,
+          "pitch_hz": 136.4,
+          "rms_energy": 0.2355,
+          "speaking_rate_wpm": 154.3,
+          "is_pause": false,
+          "spectral_centroid_hz": 1143.2
+        },
+        {
+          "time": 0.116,
+          "pitch_hz": 138.2,
+          "rms_energy": 0.2401,
+          "speaking_rate_wpm": 152.0,
+          "is_pause": false,
+          "spectral_centroid_hz": 1157.2
+        },
+        {
+          "time": 0.139,
+          "pitch_hz": 139.5,
+          "rms_energy": 0.2341,
+          "speaking_rate_wpm": 149.8,
+          "is_pause": false,
+          "spectral_centroid_hz": 1172.5
+        },
+        {
+          "time": 0.163,
+          "pitch_hz": 140.5,
+          "rms_energy": 0.2098,
+          "speaking_rate_wpm": 147.7,
+          "is_pause": false,
+          "spectral_centroid_hz": 1165.9
+        },
+        {
+          "time": 0.186,
+          "pitch_hz": 141.3,
+          "rms_energy": 0.1746,
+          "speaking_rate_wpm": 145.6,
+          "is_pause": false,
+          "spectral_centroid_hz": 1159.9
+        },
+        {
+          "time": 0.209,
+          "pitch_hz": 142.4,
+          "rms_energy": 0.1188,
+          "speaking_rate_wpm": 143.6,
+          "is_pause": false,
+          "spectral_centroid_hz": 1215.2
+        },
+        {
+          "time": 0.232,
+          "pitch_hz": 143.5,
+          "rms_energy": 0.056,
+          "speaking_rate_wpm": 141.6,
+          "is_pause": false,
+          "spectral_centroid_hz": 1653.4
+        },
+        {
+          "time": 0.255,
+          "pitch_hz": 145.4,
+          "rms_energy": 0.071,
+          "speaking_rate_wpm": 139.7,
+          "is_pause": false,
+          "spectral_centroid_hz": 1615.5
+        },
+        {
+          "time": 0.279,
+          "pitch_hz": 145.8,
+          "rms_energy": 0.1526,
+          "speaking_rate_wpm": 160.8,
+          "is_pause": false,
+          "spectral_centroid_hz": 1200.5
+        },
+        {
+          "time": 0.302,
+          "pitch_hz": 145.9,
+          "rms_energy": 0.2046,
+          "speaking_rate_wpm": 158.7,
+          "is_pause": false,
+          "spectral_centroid_hz": 1131.4
+        },
+        {
+          "time": 0.325,
+          "pitch_hz": 146.1,
+          "rms_energy": 0.2417,
+          "speaking_rate_wpm": 156.6,
+          "is_pause": false,
+          "spectral_centroid_hz": 1139.3
+        },
+        {
+          "time": 0.348,
+          "pitch_hz": 146.4,
+          "rms_energy": 0.2736,
+          "speaking_rate_wpm": 154.6,
+          "is_pause": false,
+          "spectral_centroid_hz": 1150.2
+        },
+        {
+          "time": 0.372,
+          "pitch_hz": 146.8,
+          "rms_energy": 0.2703,
+          "speaking_rate_wpm": 152.6,
+          "is_pause": false,
+          "spectral_centroid_hz": 1153.3
+        },
+        {
+          "time": 0.395,
+          "pitch_hz": 147.3,
+          "rms_energy": 0.275,
+          "speaking_rate_wpm": 150.7,
+          "is_pause": false,
+          "spectral_centroid_hz": 1156.7
+        },
+        {
+          "time": 0.418,
+          "pitch_hz": 147.6,
+          "rms_energy": 0.2749,
+          "speaking_rate_wpm": 148.9,
+          "is_pause": false,
+          "spectral_centroid_hz": 1160.2
+        },
+        {
+          "time": 0.441,
+          "pitch_hz": 148.1,
+          "rms_energy": 0.2701,
+          "speaking_rate_wpm": 147.1,
+          "is_pause": false,
+          "spectral_centroid_hz": 1164.2
+        },
+        {
+          "time": 0.464,
+          "pitch_hz": 148.5,
+          "rms_energy": 0.2715,
+          "speaking_rate_wpm": 145.3,
+          "is_pause": false,
+          "spectral_centroid_hz": 1167.6
+        },
+        {
+          "time": 0.488,
+          "pitch_hz": 148.8,
+          "rms_energy": 0.2411,
+          "speaking_rate_wpm": 143.6,
+          "is_pause": false,
+          "spectral_centroid_hz": 1163.5
+        },
+        {
+          "time": 0.511,
+          "pitch_hz": 149.0,
+          "rms_energy": 0.205,
+          "speaking_rate_wpm": 141.9,
+          "is_pause": false,
+          "spectral_centroid_hz": 1156.1
+        },
+        {
+          "time": 0.534,
+          "pitch_hz": 149.2,
+          "rms_energy": 0.1534,
+          "speaking_rate_wpm": 140.2,
+          "is_pause": false,
+          "spectral_centroid_hz": 1206.3
+        },
+        {
+          "time": 0.557,
+          "pitch_hz": 149.5,
+          "rms_energy": 0.0787,
+          "speaking_rate_wpm": 138.6,
+          "is_pause": false,
+          "spectral_centroid_hz": 1496.5
+        },
+        {
+          "time": 0.58,
+          "pitch_hz": 151.0,
+          "rms_energy": 0.0581,
+          "speaking_rate_wpm": 137.0,
+          "is_pause": false,
+          "spectral_centroid_hz": 2072.1
+        },
+        {
+          "time": 0.604,
+          "pitch_hz": 151.9,
+          "rms_energy": 0.112,
+          "speaking_rate_wpm": 135.5,
+          "is_pause": false,
+          "spectral_centroid_hz": 1320.2
+        },
+        {
+          "time": 0.627,
+          "pitch_hz": 152.7,
+          "rms_energy": 0.1629,
+          "speaking_rate_wpm": 134.0,
+          "is_pause": false,
+          "spectral_centroid_hz": 1242.1
+        },
+        {
+          "time": 0.65,
+          "pitch_hz": 153.3,
+          "rms_energy": 0.1937,
+          "speaking_rate_wpm": 132.5,
+          "is_pause": false,
+          "spectral_centroid_hz": 1267.3
+        },
+        {
+          "time": 0.673,
+          "pitch_hz": 154.2,
+          "rms_energy": 0.2204,
+          "speaking_rate_wpm": 131.1,
+          "is_pause": false,
+          "spectral_centroid_hz": 1299.4
+        },
+        {
+          "time": 0.697,
+          "pitch_hz": 155.4,
+          "rms_energy": 0.2254,
+          "speaking_rate_wpm": 129.7,
+          "is_pause": false,
+          "spectral_centroid_hz": 1311.0
+        },
+        {
+          "time": 0.72,
+          "pitch_hz": 156.4,
+          "rms_energy": 0.2014,
+          "speaking_rate_wpm": 128.3,
+          "is_pause": false,
+          "spectral_centroid_hz": 1308.8
+        },
+        {
+          "time": 0.743,
+          "pitch_hz": 156.9,
+          "rms_energy": 0.1729,
+          "speaking_rate_wpm": 126.9,
+          "is_pause": false,
+          "spectral_centroid_hz": 1290.9
+        },
+        {
+          "time": 0.766,
+          "pitch_hz": 157.7,
+          "rms_energy": 0.1267,
+          "speaking_rate_wpm": 125.6,
+          "is_pause": false,
+          "spectral_centroid_hz": 1333.8
+        },
+        {
+          "time": 0.789,
+          "pitch_hz": 158.7,
+          "rms_energy": 0.0641,
+          "speaking_rate_wpm": 124.3,
+          "is_pause": false,
+          "spectral_centroid_hz": 1648.0
+        },
+        {
+          "time": 0.813,
+          "pitch_hz": 164.3,
+          "rms_energy": 0.0621,
+          "speaking_rate_wpm": 123.0,
+          "is_pause": false,
+          "spectral_centroid_hz": 1827.9
+        },
+        {
+          "time": 0.836,
+          "pitch_hz": 163.6,
+          "rms_energy": 0.143,
+          "speaking_rate_wpm": 121.8,
+          "is_pause": false,
+          "spectral_centroid_hz": 1342.9
+        },
+        {
+          "time": 0.859,
+          "pitch_hz": 163.1,
+          "rms_energy": 0.2013,
+          "speaking_rate_wpm": 120.6,
+          "is_pause": false,
+          "spectral_centroid_hz": 1282.1
+        },
+        {
+          "time": 0.882,
+          "pitch_hz": 162.6,
+          "rms_energy": 0.2455,
+          "speaking_rate_wpm": 119.4,
+          "is_pause": false,
+          "spectral_centroid_hz": 1295.7
+        },
+        {
+          "time": 0.906,
+          "pitch_hz": 162.1,
+          "rms_energy": 0.2696,
+          "speaking_rate_wpm": 118.2,
+          "is_pause": false,
+          "spectral_centroid_hz": 1308.8
+        },
+        {
+          "time": 0.929,
+          "pitch_hz": 161.2,
+          "rms_energy": 0.2754,
+          "speaking_rate_wpm": 117.1,
+          "is_pause": false,
+          "spectral_centroid_hz": 1303.5
+        },
+        {
+          "time": 0.952,
+          "pitch_hz": 160.3,
+          "rms_energy": 0.2758,
+          "speaking_rate_wpm": 115.9,
+          "is_pause": false,
+          "spectral_centroid_hz": 1291.9
+        },
+        {
+          "time": 0.975,
+          "pitch_hz": 159.4,
+          "rms_energy": 0.2698,
+          "speaking_rate_wpm": 114.8,
+          "is_pause": false,
+          "spectral_centroid_hz": 1283.7
+        },
+        {
+          "time": 0.998,
+          "pitch_hz": 158.6,
+          "rms_energy": 0.2766,
+          "speaking_rate_wpm": 113.8,
+          "is_pause": false,
+          "spectral_centroid_hz": 1275.6
+        },
+        {
+          "time": 1.022,
+          "pitch_hz": 157.8,
+          "rms_energy": 0.2566,
+          "speaking_rate_wpm": 112.7,
+          "is_pause": false,
+          "spectral_centroid_hz": 1260.4
+        },
+        {
+          "time": 1.045,
+          "pitch_hz": 157.3,
+          "rms_energy": 0.2155,
+          "speaking_rate_wpm": 111.7,
+          "is_pause": false,
+          "spectral_centroid_hz": 1234.2
+        },
+        {
+          "time": 1.068,
+          "pitch_hz": 156.9,
+          "rms_energy": 0.173,
+          "speaking_rate_wpm": 110.6,
+          "is_pause": false,
+          "spectral_centroid_hz": 1244.1
+        },
+        {
+          "time": 1.091,
+          "pitch_hz": 156.2,
+          "rms_energy": 0.1013,
+          "speaking_rate_wpm": 125.3,
+          "is_pause": false,
+          "spectral_centroid_hz": 1387.3
+        },
+        {
+          "time": 1.115,
+          "pitch_hz": 145.1,
+          "rms_energy": 0.0455,
+          "speaking_rate_wpm": 124.2,
+          "is_pause": false,
+          "spectral_centroid_hz": 2379.2
+        },
+        {
+          "time": 1.138,
+          "pitch_hz": 143.6,
+          "rms_energy": 0.0929,
+          "speaking_rate_wpm": 123.0,
+          "is_pause": false,
+          "spectral_centroid_hz": 1350.0
+        },
+        {
+          "time": 1.161,
+          "pitch_hz": 143.0,
+          "rms_energy": 0.1361,
+          "speaking_rate_wpm": 122.0,
+          "is_pause": false,
+          "spectral_centroid_hz": 1175.4
+        },
+        {
+          "time": 1.184,
+          "pitch_hz": 142.5,
+          "rms_energy": 0.1718,
+          "speaking_rate_wpm": 120.9,
+          "is_pause": false,
+          "spectral_centroid_hz": 1159.7
+        },
+        {
+          "time": 1.207,
+          "pitch_hz": 141.8,
+          "rms_energy": 0.2011,
+          "speaking_rate_wpm": 119.8,
+          "is_pause": false,
+          "spectral_centroid_hz": 1177.4
+        },
+        {
+          "time": 1.231,
+          "pitch_hz": 140.9,
+          "rms_energy": 0.2079,
+          "speaking_rate_wpm": 118.8,
+          "is_pause": false,
+          "spectral_centroid_hz": 1173.0
+        },
+        {
+          "time": 1.254,
+          "pitch_hz": 139.9,
+          "rms_energy": 0.2086,
+          "speaking_rate_wpm": 117.8,
+          "is_pause": false,
+          "spectral_centroid_hz": 1165.8
+        },
+        {
+          "time": 1.277,
+          "pitch_hz": 138.9,
+          "rms_energy": 0.2048,
+          "speaking_rate_wpm": 116.8,
+          "is_pause": false,
+          "spectral_centroid_hz": 1154.6
+        },
+        {
+          "time": 1.3,
+          "pitch_hz": 138.0,
+          "rms_energy": 0.1824,
+          "speaking_rate_wpm": 115.8,
+          "is_pause": false,
+          "spectral_centroid_hz": 1129.9
+        },
+        {
+          "time": 1.324,
+          "pitch_hz": 137.5,
+          "rms_energy": 0.1521,
+          "speaking_rate_wpm": 129.2,
+          "is_pause": false,
+          "spectral_centroid_hz": 1109.0
+        },
+        {
+          "time": 1.347,
+          "pitch_hz": 136.9,
+          "rms_energy": 0.1138,
+          "speaking_rate_wpm": 128.1,
+          "is_pause": false,
+          "spectral_centroid_hz": 1164.3
+        },
+        {
+          "time": 1.37,
+          "pitch_hz": 136.2,
+          "rms_energy": 0.0596,
+          "speaking_rate_wpm": 127.1,
+          "is_pause": false,
+          "spectral_centroid_hz": 1603.6
+        },
+        {
+          "time": 1.393,
+          "pitch_hz": 140.8,
+          "rms_energy": 0.0603,
+          "speaking_rate_wpm": 126.0,
+          "is_pause": false,
+          "spectral_centroid_hz": 1814.0
+        },
+        {
+          "time": 1.416,
+          "pitch_hz": 141.5,
+          "rms_energy": 0.1198,
+          "speaking_rate_wpm": 125.0,
+          "is_pause": false,
+          "spectral_centroid_hz": 1211.5
+        },
+        {
+          "time": 1.44,
+          "pitch_hz": 141.9,
+          "rms_energy": 0.1614,
+          "speaking_rate_wpm": 124.0,
+          "is_pause": false,
+          "spectral_centroid_hz": 1131.6
+        },
+        {
+          "time": 1.463,
+          "pitch_hz": 142.5,
+          "rms_energy": 0.2014,
+          "speaking_rate_wpm": 123.0,
+          "is_pause": false,
+          "spectral_centroid_hz": 1150.3
+        },
+        {
+          "time": 1.486,
+          "pitch_hz": 143.1,
+          "rms_energy": 0.2207,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": false,
+          "spectral_centroid_hz": 1171.7
+        },
+        {
+          "time": 1.509,
+          "pitch_hz": 144.0,
+          "rms_energy": 0.2222,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": false,
+          "spectral_centroid_hz": 1179.4
+        },
+        {
+          "time": 1.533,
+          "pitch_hz": 144.8,
+          "rms_energy": 0.2195,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": false,
+          "spectral_centroid_hz": 1185.7
+        },
+        {
+          "time": 1.556,
+          "pitch_hz": 145.5,
+          "rms_energy": 0.1882,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": false,
+          "spectral_centroid_hz": 1175.0
+        },
+        {
+          "time": 1.579,
+          "pitch_hz": 145.9,
+          "rms_energy": 0.1543,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": false,
+          "spectral_centroid_hz": 1176.0
+        },
+        {
+          "time": 1.602,
+          "pitch_hz": 146.4,
+          "rms_energy": 0.111,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": false,
+          "spectral_centroid_hz": 1272.3
+        },
+        {
+          "time": 1.625,
+          "pitch_hz": 147.3,
+          "rms_energy": 0.045,
+          "speaking_rate_wpm": 108.5,
+          "is_pause": false,
+          "spectral_centroid_hz": 1921.1
+        },
+        {
+          "time": 1.649,
+          "pitch_hz": 155.9,
+          "rms_energy": 0.0908,
+          "speaking_rate_wpm": 108.5,
+          "is_pause": false,
+          "spectral_centroid_hz": 1541.6
+        },
+        {
+          "time": 1.672,
+          "pitch_hz": 156.5,
+          "rms_energy": 0.174,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": false,
+          "spectral_centroid_hz": 1273.2
+        },
+        {
+          "time": 1.695,
+          "pitch_hz": 156.9,
+          "rms_energy": 0.2195,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": false,
+          "spectral_centroid_hz": 1241.9
+        },
+        {
+          "time": 1.718,
+          "pitch_hz": 157.4,
+          "rms_energy": 0.2653,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": false,
+          "spectral_centroid_hz": 1272.1
+        },
+        {
+          "time": 1.741,
+          "pitch_hz": 158.1,
+          "rms_energy": 0.2909,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": false,
+          "spectral_centroid_hz": 1288.8
+        },
+        {
+          "time": 1.765,
+          "pitch_hz": 158.9,
+          "rms_energy": 0.2832,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": false,
+          "spectral_centroid_hz": 1296.8
+        },
+        {
+          "time": 1.788,
+          "pitch_hz": 159.7,
+          "rms_energy": 0.2902,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": false,
+          "spectral_centroid_hz": 1304.3
+        },
+        {
+          "time": 1.811,
+          "pitch_hz": 160.7,
+          "rms_energy": 0.2898,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": false,
+          "spectral_centroid_hz": 1313.8
+        },
+        {
+          "time": 1.834,
+          "pitch_hz": 161.6,
+          "rms_energy": 0.289,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": false,
+          "spectral_centroid_hz": 1324.2
+        },
+        {
+          "time": 1.858,
+          "pitch_hz": 162.3,
+          "rms_energy": 0.2897,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": false,
+          "spectral_centroid_hz": 1328.2
+        },
+        {
+          "time": 1.881,
+          "pitch_hz": 163.2,
+          "rms_energy": 0.2881,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": false,
+          "spectral_centroid_hz": 1332.7
+        },
+        {
+          "time": 1.904,
+          "pitch_hz": 164.1,
+          "rms_energy": 0.2868,
+          "speaking_rate_wpm": 108.5,
+          "is_pause": false,
+          "spectral_centroid_hz": 1338.8
+        },
+        {
+          "time": 1.927,
+          "pitch_hz": 164.9,
+          "rms_energy": 0.2811,
+          "speaking_rate_wpm": 108.5,
+          "is_pause": false,
+          "spectral_centroid_hz": 1344.6
+        },
+        {
+          "time": 1.95,
+          "pitch_hz": 165.5,
+          "rms_energy": 0.2576,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": false,
+          "spectral_centroid_hz": 1334.0
+        },
+        {
+          "time": 1.974,
+          "pitch_hz": 165.9,
+          "rms_energy": 0.2135,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": false,
+          "spectral_centroid_hz": 1324.2
+        },
+        {
+          "time": 1.997,
+          "pitch_hz": 166.4,
+          "rms_energy": 0.1552,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": false,
+          "spectral_centroid_hz": 1366.7
+        },
+        {
+          "time": 2.02,
+          "pitch_hz": 167.1,
+          "rms_energy": 0.0747,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": false,
+          "spectral_centroid_hz": 1682.8
+        },
+        {
+          "time": 2.043,
+          "pitch_hz": null,
+          "rms_energy": 0.0142,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": true,
+          "spectral_centroid_hz": 4765.7
+        },
+        {
+          "time": 2.067,
+          "pitch_hz": null,
+          "rms_energy": 0.0011,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": true,
+          "spectral_centroid_hz": 5430.2
+        },
+        {
+          "time": 2.09,
+          "pitch_hz": null,
+          "rms_energy": 0.0011,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": true,
+          "spectral_centroid_hz": 5436.2
+        },
+        {
+          "time": 2.113,
+          "pitch_hz": null,
+          "rms_energy": 0.0011,
+          "speaking_rate_wpm": 135.6,
+          "is_pause": true,
+          "spectral_centroid_hz": 5638.9
+        },
+        {
+          "time": 2.136,
+          "pitch_hz": null,
+          "rms_energy": 0.0011,
+          "speaking_rate_wpm": 135.6,
+          "is_pause": true,
+          "spectral_centroid_hz": 5678.6
+        },
+        {
+          "time": 2.159,
+          "pitch_hz": null,
+          "rms_energy": 0.0011,
+          "speaking_rate_wpm": 135.6,
+          "is_pause": true,
+          "spectral_centroid_hz": 5614.2
+        },
+        {
+          "time": 2.183,
+          "pitch_hz": null,
+          "rms_energy": 0.0011,
+          "speaking_rate_wpm": 135.6,
+          "is_pause": true,
+          "spectral_centroid_hz": 5551.7
+        },
+        {
+          "time": 2.206,
+          "pitch_hz": null,
+          "rms_energy": 0.0011,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": true,
+          "spectral_centroid_hz": 5352.8
+        },
+        {
+          "time": 2.229,
+          "pitch_hz": null,
+          "rms_energy": 0.0011,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": true,
+          "spectral_centroid_hz": 5396.5
+        },
+        {
+          "time": 2.252,
+          "pitch_hz": null,
+          "rms_energy": 0.0011,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": true,
+          "spectral_centroid_hz": 5439.6
+        },
+        {
+          "time": 2.276,
+          "pitch_hz": null,
+          "rms_energy": 0.0011,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": true,
+          "spectral_centroid_hz": 5440.1
+        },
+        {
+          "time": 2.299,
+          "pitch_hz": null,
+          "rms_energy": 0.0011,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": true,
+          "spectral_centroid_hz": 5474.3
+        },
+        {
+          "time": 2.322,
+          "pitch_hz": null,
+          "rms_energy": 0.0011,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": true,
+          "spectral_centroid_hz": 5453.2
+        },
+        {
+          "time": 2.345,
+          "pitch_hz": null,
+          "rms_energy": 0.0011,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": true,
+          "spectral_centroid_hz": 5345.9
+        },
+        {
+          "time": 2.368,
+          "pitch_hz": null,
+          "rms_energy": 0.0011,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": true,
+          "spectral_centroid_hz": 5441.6
+        },
+        {
+          "time": 2.392,
+          "pitch_hz": null,
+          "rms_energy": 0.0011,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": true,
+          "spectral_centroid_hz": 5514.3
+        },
+        {
+          "time": 2.415,
+          "pitch_hz": null,
+          "rms_energy": 0.0011,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": true,
+          "spectral_centroid_hz": 5559.6
+        },
+        {
+          "time": 2.438,
+          "pitch_hz": 149.7,
+          "rms_energy": 0.0351,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": false,
+          "spectral_centroid_hz": 2361.1
+        },
+        {
+          "time": 2.461,
+          "pitch_hz": 149.1,
+          "rms_energy": 0.1043,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": false,
+          "spectral_centroid_hz": 1332.9
+        },
+        {
+          "time": 2.485,
+          "pitch_hz": 148.7,
+          "rms_energy": 0.1434,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": false,
+          "spectral_centroid_hz": 1184.1
+        },
+        {
+          "time": 2.508,
+          "pitch_hz": 148.4,
+          "rms_energy": 0.1802,
+          "speaking_rate_wpm": 108.5,
+          "is_pause": false,
+          "spectral_centroid_hz": 1177.2
+        },
+        {
+          "time": 2.531,
+          "pitch_hz": 148.0,
+          "rms_energy": 0.2039,
+          "speaking_rate_wpm": 108.5,
+          "is_pause": false,
+          "spectral_centroid_hz": 1189.0
+        },
+        {
+          "time": 2.554,
+          "pitch_hz": 147.4,
+          "rms_energy": 0.2041,
+          "speaking_rate_wpm": 108.5,
+          "is_pause": false,
+          "spectral_centroid_hz": 1183.8
+        },
+        {
+          "time": 2.577,
+          "pitch_hz": 146.9,
+          "rms_energy": 0.1926,
+          "speaking_rate_wpm": 108.5,
+          "is_pause": false,
+          "spectral_centroid_hz": 1171.5
+        },
+        {
+          "time": 2.601,
+          "pitch_hz": 146.5,
+          "rms_energy": 0.1594,
+          "speaking_rate_wpm": 108.5,
+          "is_pause": false,
+          "spectral_centroid_hz": 1151.2
+        },
+        {
+          "time": 2.624,
+          "pitch_hz": 146.2,
+          "rms_energy": 0.1228,
+          "speaking_rate_wpm": 108.5,
+          "is_pause": false,
+          "spectral_centroid_hz": 1199.8
+        },
+        {
+          "time": 2.647,
+          "pitch_hz": 145.8,
+          "rms_energy": 0.0731,
+          "speaking_rate_wpm": 108.5,
+          "is_pause": false,
+          "spectral_centroid_hz": 1530.9
+        },
+        {
+          "time": 2.67,
+          "pitch_hz": 146.1,
+          "rms_energy": 0.0502,
+          "speaking_rate_wpm": 108.5,
+          "is_pause": false,
+          "spectral_centroid_hz": 1934.1
+        },
+        {
+          "time": 2.694,
+          "pitch_hz": 147.1,
+          "rms_energy": 0.1319,
+          "speaking_rate_wpm": 108.5,
+          "is_pause": false,
+          "spectral_centroid_hz": 1265.8
+        },
+        {
+          "time": 2.717,
+          "pitch_hz": 147.8,
+          "rms_energy": 0.1789,
+          "speaking_rate_wpm": 108.5,
+          "is_pause": false,
+          "spectral_centroid_hz": 1209.1
+        },
+        {
+          "time": 2.74,
+          "pitch_hz": 148.7,
+          "rms_energy": 0.2249,
+          "speaking_rate_wpm": 108.5,
+          "is_pause": false,
+          "spectral_centroid_hz": 1235.5
+        },
+        {
+          "time": 2.763,
+          "pitch_hz": 149.4,
+          "rms_energy": 0.2504,
+          "speaking_rate_wpm": 94.9,
+          "is_pause": false,
+          "spectral_centroid_hz": 1269.6
+        },
+        {
+          "time": 2.786,
+          "pitch_hz": 150.9,
+          "rms_energy": 0.2566,
+          "speaking_rate_wpm": 94.9,
+          "is_pause": false,
+          "spectral_centroid_hz": 1284.4
+        },
+        {
+          "time": 2.81,
+          "pitch_hz": 152.1,
+          "rms_energy": 0.2565,
+          "speaking_rate_wpm": 94.9,
+          "is_pause": false,
+          "spectral_centroid_hz": 1293.6
+        },
+        {
+          "time": 2.833,
+          "pitch_hz": 153.6,
+          "rms_energy": 0.2544,
+          "speaking_rate_wpm": 94.9,
+          "is_pause": false,
+          "spectral_centroid_hz": 1303.7
+        },
+        {
+          "time": 2.856,
+          "pitch_hz": 154.9,
+          "rms_energy": 0.256,
+          "speaking_rate_wpm": 94.9,
+          "is_pause": false,
+          "spectral_centroid_hz": 1314.9
+        },
+        {
+          "time": 2.879,
+          "pitch_hz": 155.9,
+          "rms_energy": 0.2263,
+          "speaking_rate_wpm": 94.9,
+          "is_pause": false,
+          "spectral_centroid_hz": 1309.3
+        },
+        {
+          "time": 2.902,
+          "pitch_hz": 156.6,
+          "rms_energy": 0.1924,
+          "speaking_rate_wpm": 94.9,
+          "is_pause": false,
+          "spectral_centroid_hz": 1299.4
+        },
+        {
+          "time": 2.926,
+          "pitch_hz": 157.4,
+          "rms_energy": 0.1398,
+          "speaking_rate_wpm": 94.9,
+          "is_pause": false,
+          "spectral_centroid_hz": 1334.9
+        },
+        {
+          "time": 2.949,
+          "pitch_hz": 158.6,
+          "rms_energy": 0.0658,
+          "speaking_rate_wpm": 108.5,
+          "is_pause": false,
+          "spectral_centroid_hz": 1637.0
+        },
+        {
+          "time": 2.972,
+          "pitch_hz": 160.3,
+          "rms_energy": 0.0602,
+          "speaking_rate_wpm": 108.5,
+          "is_pause": false,
+          "spectral_centroid_hz": 1884.8
+        },
+        {
+          "time": 2.995,
+          "pitch_hz": 160.7,
+          "rms_energy": 0.1369,
+          "speaking_rate_wpm": 108.5,
+          "is_pause": false,
+          "spectral_centroid_hz": 1318.6
+        },
+        {
+          "time": 3.019,
+          "pitch_hz": 161.0,
+          "rms_energy": 0.1901,
+          "speaking_rate_wpm": 94.9,
+          "is_pause": false,
+          "spectral_centroid_hz": 1240.7
+        },
+        {
+          "time": 3.042,
+          "pitch_hz": 161.2,
+          "rms_energy": 0.2237,
+          "speaking_rate_wpm": 94.9,
+          "is_pause": false,
+          "spectral_centroid_hz": 1250.4
+        },
+        {
+          "time": 3.065,
+          "pitch_hz": 161.5,
+          "rms_energy": 0.2533,
+          "speaking_rate_wpm": 94.9,
+          "is_pause": false,
+          "spectral_centroid_hz": 1269.4
+        },
+        {
+          "time": 3.088,
+          "pitch_hz": 161.9,
+          "rms_energy": 0.2574,
+          "speaking_rate_wpm": 94.9,
+          "is_pause": false,
+          "spectral_centroid_hz": 1271.8
+        },
+        {
+          "time": 3.111,
+          "pitch_hz": 162.4,
+          "rms_energy": 0.2573,
+          "speaking_rate_wpm": 94.9,
+          "is_pause": false,
+          "spectral_centroid_hz": 1271.2
+        },
+        {
+          "time": 3.135,
+          "pitch_hz": 162.8,
+          "rms_energy": 0.2592,
+          "speaking_rate_wpm": 94.9,
+          "is_pause": false,
+          "spectral_centroid_hz": 1272.7
+        },
+        {
+          "time": 3.158,
+          "pitch_hz": 163.2,
+          "rms_energy": 0.2567,
+          "speaking_rate_wpm": 94.9,
+          "is_pause": false,
+          "spectral_centroid_hz": 1275.2
+        },
+        {
+          "time": 3.181,
+          "pitch_hz": 163.6,
+          "rms_energy": 0.2387,
+          "speaking_rate_wpm": 94.9,
+          "is_pause": false,
+          "spectral_centroid_hz": 1274.2
+        },
+        {
+          "time": 3.204,
+          "pitch_hz": 163.9,
+          "rms_energy": 0.2019,
+          "speaking_rate_wpm": 108.5,
+          "is_pause": false,
+          "spectral_centroid_hz": 1263.7
+        },
+        {
+          "time": 3.228,
+          "pitch_hz": 164.1,
+          "rms_energy": 0.1607,
+          "speaking_rate_wpm": 108.5,
+          "is_pause": false,
+          "spectral_centroid_hz": 1288.1
+        },
+        {
+          "time": 3.251,
+          "pitch_hz": 164.4,
+          "rms_energy": 0.0988,
+          "speaking_rate_wpm": 94.9,
+          "is_pause": false,
+          "spectral_centroid_hz": 1468.8
+        },
+        {
+          "time": 3.274,
+          "pitch_hz": 164.3,
+          "rms_energy": 0.0521,
+          "speaking_rate_wpm": 94.9,
+          "is_pause": false,
+          "spectral_centroid_hz": 2497.3
+        },
+        {
+          "time": 3.297,
+          "pitch_hz": 162.5,
+          "rms_energy": 0.124,
+          "speaking_rate_wpm": 94.9,
+          "is_pause": false,
+          "spectral_centroid_hz": 1440.6
+        },
+        {
+          "time": 3.32,
+          "pitch_hz": 161.6,
+          "rms_energy": 0.1769,
+          "speaking_rate_wpm": 94.9,
+          "is_pause": false,
+          "spectral_centroid_hz": 1335.7
+        },
+        {
+          "time": 3.344,
+          "pitch_hz": 160.6,
+          "rms_energy": 0.2267,
+          "speaking_rate_wpm": 94.9,
+          "is_pause": false,
+          "spectral_centroid_hz": 1342.0
+        },
+        {
+          "time": 3.367,
+          "pitch_hz": 159.4,
+          "rms_energy": 0.2652,
+          "speaking_rate_wpm": 94.9,
+          "is_pause": false,
+          "spectral_centroid_hz": 1356.8
+        },
+        {
+          "time": 3.39,
+          "pitch_hz": 157.9,
+          "rms_energy": 0.27,
+          "speaking_rate_wpm": 94.9,
+          "is_pause": false,
+          "spectral_centroid_hz": 1343.2
+        },
+        {
+          "time": 3.413,
+          "pitch_hz": 156.2,
+          "rms_energy": 0.2791,
+          "speaking_rate_wpm": 94.9,
+          "is_pause": false,
+          "spectral_centroid_hz": 1327.1
+        },
+        {
+          "time": 3.437,
+          "pitch_hz": 154.4,
+          "rms_energy": 0.2729,
+          "speaking_rate_wpm": 108.5,
+          "is_pause": false,
+          "spectral_centroid_hz": 1311.5
+        },
+        {
+          "time": 3.46,
+          "pitch_hz": 152.3,
+          "rms_energy": 0.2742,
+          "speaking_rate_wpm": 108.5,
+          "is_pause": false,
+          "spectral_centroid_hz": 1297.1
+        },
+        {
+          "time": 3.483,
+          "pitch_hz": 150.8,
+          "rms_energy": 0.2752,
+          "speaking_rate_wpm": 108.5,
+          "is_pause": false,
+          "spectral_centroid_hz": 1282.4
+        },
+        {
+          "time": 3.506,
+          "pitch_hz": 148.7,
+          "rms_energy": 0.2766,
+          "speaking_rate_wpm": 108.5,
+          "is_pause": false,
+          "spectral_centroid_hz": 1265.3
+        },
+        {
+          "time": 3.529,
+          "pitch_hz": 147.0,
+          "rms_energy": 0.2777,
+          "speaking_rate_wpm": 108.5,
+          "is_pause": false,
+          "spectral_centroid_hz": 1248.4
+        },
+        {
+          "time": 3.553,
+          "pitch_hz": 145.2,
+          "rms_energy": 0.271,
+          "speaking_rate_wpm": 108.5,
+          "is_pause": false,
+          "spectral_centroid_hz": 1232.6
+        },
+        {
+          "time": 3.576,
+          "pitch_hz": 143.3,
+          "rms_energy": 0.281,
+          "speaking_rate_wpm": 108.5,
+          "is_pause": false,
+          "spectral_centroid_hz": 1217.2
+        },
+        {
+          "time": 3.599,
+          "pitch_hz": 141.4,
+          "rms_energy": 0.2669,
+          "speaking_rate_wpm": 108.5,
+          "is_pause": false,
+          "spectral_centroid_hz": 1201.4
+        },
+        {
+          "time": 3.622,
+          "pitch_hz": 140.3,
+          "rms_energy": 0.2403,
+          "speaking_rate_wpm": 108.5,
+          "is_pause": false,
+          "spectral_centroid_hz": 1171.2
+        },
+        {
+          "time": 3.646,
+          "pitch_hz": 139.4,
+          "rms_energy": 0.2007,
+          "speaking_rate_wpm": 108.5,
+          "is_pause": false,
+          "spectral_centroid_hz": 1143.6
+        },
+        {
+          "time": 3.669,
+          "pitch_hz": 138.1,
+          "rms_energy": 0.1338,
+          "speaking_rate_wpm": 108.5,
+          "is_pause": false,
+          "spectral_centroid_hz": 1163.1
+        },
+        {
+          "time": 3.692,
+          "pitch_hz": 136.8,
+          "rms_energy": 0.0624,
+          "speaking_rate_wpm": 108.5,
+          "is_pause": false,
+          "spectral_centroid_hz": 1523.0
+        },
+        {
+          "time": 3.715,
+          "pitch_hz": null,
+          "rms_energy": 0.0116,
+          "speaking_rate_wpm": 108.5,
+          "is_pause": true,
+          "spectral_centroid_hz": 5294.5
+        },
+        {
+          "time": 3.738,
+          "pitch_hz": null,
+          "rms_energy": 0.0011,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": true,
+          "spectral_centroid_hz": 5630.2
+        },
+        {
+          "time": 3.762,
+          "pitch_hz": null,
+          "rms_energy": 0.0011,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": true,
+          "spectral_centroid_hz": 5606.9
+        },
+        {
+          "time": 3.785,
+          "pitch_hz": null,
+          "rms_energy": 0.0011,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": true,
+          "spectral_centroid_hz": 5434.6
+        },
+        {
+          "time": 3.808,
+          "pitch_hz": null,
+          "rms_energy": 0.0011,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": true,
+          "spectral_centroid_hz": 5598.7
+        },
+        {
+          "time": 3.831,
+          "pitch_hz": null,
+          "rms_energy": 0.0011,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": true,
+          "spectral_centroid_hz": 5647.8
+        },
+        {
+          "time": 3.855,
+          "pitch_hz": null,
+          "rms_energy": 0.0011,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": true,
+          "spectral_centroid_hz": 5499.1
+        },
+        {
+          "time": 3.878,
+          "pitch_hz": null,
+          "rms_energy": 0.0011,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": true,
+          "spectral_centroid_hz": 5495.9
+        },
+        {
+          "time": 3.901,
+          "pitch_hz": null,
+          "rms_energy": 0.0011,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": true,
+          "spectral_centroid_hz": 5436.9
+        },
+        {
+          "time": 3.924,
+          "pitch_hz": null,
+          "rms_energy": 0.0011,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": true,
+          "spectral_centroid_hz": 5422.9
+        },
+        {
+          "time": 3.947,
+          "pitch_hz": null,
+          "rms_energy": 0.0011,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": true,
+          "spectral_centroid_hz": 5494.8
+        },
+        {
+          "time": 3.971,
+          "pitch_hz": null,
+          "rms_energy": 0.0011,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": true,
+          "spectral_centroid_hz": 5480.5
+        },
+        {
+          "time": 3.994,
+          "pitch_hz": null,
+          "rms_energy": 0.0011,
+          "speaking_rate_wpm": 135.6,
+          "is_pause": true,
+          "spectral_centroid_hz": 5425.4
+        },
+        {
+          "time": 4.017,
+          "pitch_hz": null,
+          "rms_energy": 0.0011,
+          "speaking_rate_wpm": 135.6,
+          "is_pause": true,
+          "spectral_centroid_hz": 5552.2
+        },
+        {
+          "time": 4.04,
+          "pitch_hz": null,
+          "rms_energy": 0.0011,
+          "speaking_rate_wpm": 135.6,
+          "is_pause": true,
+          "spectral_centroid_hz": 5589.6
+        },
+        {
+          "time": 4.063,
+          "pitch_hz": null,
+          "rms_energy": 0.0011,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": true,
+          "spectral_centroid_hz": 5508.2
+        },
+        {
+          "time": 4.087,
+          "pitch_hz": null,
+          "rms_energy": 0.0011,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": true,
+          "spectral_centroid_hz": 5537.3
+        },
+        {
+          "time": 4.11,
+          "pitch_hz": null,
+          "rms_energy": 0.0011,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": true,
+          "spectral_centroid_hz": 5619.3
+        },
+        {
+          "time": 4.133,
+          "pitch_hz": null,
+          "rms_energy": 0.0011,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": true,
+          "spectral_centroid_hz": 5524.2
+        },
+        {
+          "time": 4.156,
+          "pitch_hz": null,
+          "rms_energy": 0.0011,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": true,
+          "spectral_centroid_hz": 5578.1
+        },
+        {
+          "time": 4.18,
+          "pitch_hz": null,
+          "rms_energy": 0.0011,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": true,
+          "spectral_centroid_hz": 5533.2
+        },
+        {
+          "time": 4.203,
+          "pitch_hz": null,
+          "rms_energy": 0.0011,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": true,
+          "spectral_centroid_hz": 5494.9
+        },
+        {
+          "time": 4.226,
+          "pitch_hz": null,
+          "rms_energy": 0.0011,
+          "speaking_rate_wpm": 135.6,
+          "is_pause": true,
+          "spectral_centroid_hz": 5511.0
+        },
+        {
+          "time": 4.249,
+          "pitch_hz": null,
+          "rms_energy": 0.0011,
+          "speaking_rate_wpm": 135.6,
+          "is_pause": true,
+          "spectral_centroid_hz": 5509.0
+        },
+        {
+          "time": 4.272,
+          "pitch_hz": null,
+          "rms_energy": 0.0011,
+          "speaking_rate_wpm": 135.6,
+          "is_pause": true,
+          "spectral_centroid_hz": 5469.5
+        },
+        {
+          "time": 4.296,
+          "pitch_hz": null,
+          "rms_energy": 0.0109,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": true,
+          "spectral_centroid_hz": 5049.6
+        },
+        {
+          "time": 4.319,
+          "pitch_hz": 140.8,
+          "rms_energy": 0.067,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": false,
+          "spectral_centroid_hz": 1533.4
+        },
+        {
+          "time": 4.342,
+          "pitch_hz": 141.0,
+          "rms_energy": 0.1254,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": false,
+          "spectral_centroid_hz": 1159.4
+        },
+        {
+          "time": 4.365,
+          "pitch_hz": 141.3,
+          "rms_energy": 0.1603,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": false,
+          "spectral_centroid_hz": 1100.5
+        },
+        {
+          "time": 4.389,
+          "pitch_hz": 141.6,
+          "rms_energy": 0.1891,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": false,
+          "spectral_centroid_hz": 1119.8
+        },
+        {
+          "time": 4.412,
+          "pitch_hz": 142.1,
+          "rms_energy": 0.2096,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": false,
+          "spectral_centroid_hz": 1130.9
+        },
+        {
+          "time": 4.435,
+          "pitch_hz": 142.7,
+          "rms_energy": 0.2067,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": false,
+          "spectral_centroid_hz": 1134.7
+        },
+        {
+          "time": 4.458,
+          "pitch_hz": 143.1,
+          "rms_energy": 0.1966,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": false,
+          "spectral_centroid_hz": 1135.5
+        },
+        {
+          "time": 4.481,
+          "pitch_hz": 143.4,
+          "rms_energy": 0.1723,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": false,
+          "spectral_centroid_hz": 1125.0
+        },
+        {
+          "time": 4.505,
+          "pitch_hz": 143.8,
+          "rms_energy": 0.1308,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": false,
+          "spectral_centroid_hz": 1143.1
+        },
+        {
+          "time": 4.528,
+          "pitch_hz": 144.2,
+          "rms_energy": 0.0843,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": false,
+          "spectral_centroid_hz": 1325.7
+        },
+        {
+          "time": 4.551,
+          "pitch_hz": 144.7,
+          "rms_energy": 0.0413,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": false,
+          "spectral_centroid_hz": 2485.3
+        },
+        {
+          "time": 4.574,
+          "pitch_hz": 146.0,
+          "rms_energy": 0.0814,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": false,
+          "spectral_centroid_hz": 1428.8
+        },
+        {
+          "time": 4.598,
+          "pitch_hz": 146.2,
+          "rms_energy": 0.1342,
+          "speaking_rate_wpm": 135.6,
+          "is_pause": false,
+          "spectral_centroid_hz": 1183.6
+        },
+        {
+          "time": 4.621,
+          "pitch_hz": 146.5,
+          "rms_energy": 0.1666,
+          "speaking_rate_wpm": 135.6,
+          "is_pause": false,
+          "spectral_centroid_hz": 1149.9
+        },
+        {
+          "time": 4.644,
+          "pitch_hz": 146.9,
+          "rms_energy": 0.199,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": false,
+          "spectral_centroid_hz": 1175.0
+        },
+        {
+          "time": 4.667,
+          "pitch_hz": 147.4,
+          "rms_energy": 0.2076,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": false,
+          "spectral_centroid_hz": 1183.9
+        },
+        {
+          "time": 4.69,
+          "pitch_hz": 148.0,
+          "rms_energy": 0.1977,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": false,
+          "spectral_centroid_hz": 1187.0
+        },
+        {
+          "time": 4.714,
+          "pitch_hz": 148.3,
+          "rms_energy": 0.1733,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": false,
+          "spectral_centroid_hz": 1171.8
+        },
+        {
+          "time": 4.737,
+          "pitch_hz": 148.7,
+          "rms_energy": 0.1331,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": false,
+          "spectral_centroid_hz": 1193.9
+        },
+        {
+          "time": 4.76,
+          "pitch_hz": 149.1,
+          "rms_energy": 0.0898,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": false,
+          "spectral_centroid_hz": 1388.8
+        },
+        {
+          "time": 4.783,
+          "pitch_hz": 160.3,
+          "rms_energy": 0.0484,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": false,
+          "spectral_centroid_hz": 2381.8
+        },
+        {
+          "time": 4.807,
+          "pitch_hz": 161.4,
+          "rms_energy": 0.1118,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": false,
+          "spectral_centroid_hz": 1405.7
+        },
+        {
+          "time": 4.83,
+          "pitch_hz": 161.8,
+          "rms_energy": 0.1766,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": false,
+          "spectral_centroid_hz": 1285.3
+        },
+        {
+          "time": 4.853,
+          "pitch_hz": 162.3,
+          "rms_energy": 0.2253,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": false,
+          "spectral_centroid_hz": 1289.1
+        },
+        {
+          "time": 4.876,
+          "pitch_hz": 162.8,
+          "rms_energy": 0.2623,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": false,
+          "spectral_centroid_hz": 1324.2
+        },
+        {
+          "time": 4.899,
+          "pitch_hz": 163.6,
+          "rms_energy": 0.2779,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": false,
+          "spectral_centroid_hz": 1333.7
+        },
+        {
+          "time": 4.923,
+          "pitch_hz": 164.6,
+          "rms_energy": 0.2762,
+          "speaking_rate_wpm": 108.5,
+          "is_pause": false,
+          "spectral_centroid_hz": 1340.4
+        },
+        {
+          "time": 4.946,
+          "pitch_hz": 165.4,
+          "rms_energy": 0.2713,
+          "speaking_rate_wpm": 108.5,
+          "is_pause": false,
+          "spectral_centroid_hz": 1347.2
+        },
+        {
+          "time": 4.969,
+          "pitch_hz": 166.4,
+          "rms_energy": 0.2698,
+          "speaking_rate_wpm": 108.5,
+          "is_pause": false,
+          "spectral_centroid_hz": 1355.0
+        },
+        {
+          "time": 4.992,
+          "pitch_hz": 167.1,
+          "rms_energy": 0.25,
+          "speaking_rate_wpm": 108.5,
+          "is_pause": false,
+          "spectral_centroid_hz": 1353.4
+        },
+        {
+          "time": 5.016,
+          "pitch_hz": 167.7,
+          "rms_energy": 0.2143,
+          "speaking_rate_wpm": 108.5,
+          "is_pause": false,
+          "spectral_centroid_hz": 1336.3
+        },
+        {
+          "time": 5.039,
+          "pitch_hz": 168.1,
+          "rms_energy": 0.1703,
+          "speaking_rate_wpm": 108.5,
+          "is_pause": false,
+          "spectral_centroid_hz": 1355.7
+        },
+        {
+          "time": 5.062,
+          "pitch_hz": 168.7,
+          "rms_energy": 0.1007,
+          "speaking_rate_wpm": 108.5,
+          "is_pause": false,
+          "spectral_centroid_hz": 1511.4
+        },
+        {
+          "time": 5.085,
+          "pitch_hz": 167.4,
+          "rms_energy": 0.0471,
+          "speaking_rate_wpm": 94.9,
+          "is_pause": false,
+          "spectral_centroid_hz": 2470.8
+        },
+        {
+          "time": 5.108,
+          "pitch_hz": 162.6,
+          "rms_energy": 0.103,
+          "speaking_rate_wpm": 94.9,
+          "is_pause": false,
+          "spectral_centroid_hz": 1453.1
+        },
+        {
+          "time": 5.132,
+          "pitch_hz": 161.5,
+          "rms_energy": 0.1553,
+          "speaking_rate_wpm": 94.9,
+          "is_pause": false,
+          "spectral_centroid_hz": 1335.7
+        },
+        {
+          "time": 5.155,
+          "pitch_hz": 160.8,
+          "rms_energy": 0.1871,
+          "speaking_rate_wpm": 94.9,
+          "is_pause": false,
+          "spectral_centroid_hz": 1339.7
+        },
+        {
+          "time": 5.178,
+          "pitch_hz": 159.7,
+          "rms_energy": 0.2186,
+          "speaking_rate_wpm": 108.5,
+          "is_pause": false,
+          "spectral_centroid_hz": 1354.0
+        },
+        {
+          "time": 5.201,
+          "pitch_hz": 158.1,
+          "rms_energy": 0.2281,
+          "speaking_rate_wpm": 108.5,
+          "is_pause": false,
+          "spectral_centroid_hz": 1340.0
+        },
+        {
+          "time": 5.224,
+          "pitch_hz": 156.4,
+          "rms_energy": 0.2208,
+          "speaking_rate_wpm": 108.5,
+          "is_pause": false,
+          "spectral_centroid_hz": 1324.4
+        },
+        {
+          "time": 5.248,
+          "pitch_hz": 155.3,
+          "rms_energy": 0.2055,
+          "speaking_rate_wpm": 108.5,
+          "is_pause": false,
+          "spectral_centroid_hz": 1295.7
+        },
+        {
+          "time": 5.271,
+          "pitch_hz": 154.3,
+          "rms_energy": 0.169,
+          "speaking_rate_wpm": 108.5,
+          "is_pause": false,
+          "spectral_centroid_hz": 1264.6
+        },
+        {
+          "time": 5.294,
+          "pitch_hz": 153.2,
+          "rms_energy": 0.1216,
+          "speaking_rate_wpm": 108.5,
+          "is_pause": false,
+          "spectral_centroid_hz": 1285.2
+        },
+        {
+          "time": 5.317,
+          "pitch_hz": 152.1,
+          "rms_energy": 0.0676,
+          "speaking_rate_wpm": 108.5,
+          "is_pause": false,
+          "spectral_centroid_hz": 1613.6
+        },
+        {
+          "time": 5.341,
+          "pitch_hz": 156.1,
+          "rms_energy": 0.0532,
+          "speaking_rate_wpm": 108.5,
+          "is_pause": false,
+          "spectral_centroid_hz": 2066.5
+        },
+        {
+          "time": 5.364,
+          "pitch_hz": 156.9,
+          "rms_energy": 0.1096,
+          "speaking_rate_wpm": 108.5,
+          "is_pause": false,
+          "spectral_centroid_hz": 1352.7
+        },
+        {
+          "time": 5.387,
+          "pitch_hz": 157.7,
+          "rms_energy": 0.1592,
+          "speaking_rate_wpm": 108.5,
+          "is_pause": false,
+          "spectral_centroid_hz": 1281.2
+        },
+        {
+          "time": 5.41,
+          "pitch_hz": 158.4,
+          "rms_energy": 0.1973,
+          "speaking_rate_wpm": 108.5,
+          "is_pause": false,
+          "spectral_centroid_hz": 1306.1
+        },
+        {
+          "time": 5.433,
+          "pitch_hz": 159.3,
+          "rms_energy": 0.2218,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": false,
+          "spectral_centroid_hz": 1338.5
+        },
+        {
+          "time": 5.457,
+          "pitch_hz": 160.3,
+          "rms_energy": 0.224,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": false,
+          "spectral_centroid_hz": 1351.5
+        },
+        {
+          "time": 5.48,
+          "pitch_hz": 161.3,
+          "rms_energy": 0.2038,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": false,
+          "spectral_centroid_hz": 1349.4
+        },
+        {
+          "time": 5.503,
+          "pitch_hz": 162.0,
+          "rms_energy": 0.1679,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": false,
+          "spectral_centroid_hz": 1329.4
+        },
+        {
+          "time": 5.526,
+          "pitch_hz": 162.8,
+          "rms_energy": 0.1235,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": false,
+          "spectral_centroid_hz": 1372.0
+        },
+        {
+          "time": 5.55,
+          "pitch_hz": 163.5,
+          "rms_energy": 0.071,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": false,
+          "spectral_centroid_hz": 1724.5
+        },
+        {
+          "time": 5.573,
+          "pitch_hz": 170.8,
+          "rms_energy": 0.0797,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": false,
+          "spectral_centroid_hz": 1838.9
+        },
+        {
+          "time": 5.596,
+          "pitch_hz": 171.3,
+          "rms_energy": 0.1633,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": false,
+          "spectral_centroid_hz": 1374.5
+        },
+        {
+          "time": 5.619,
+          "pitch_hz": 171.7,
+          "rms_energy": 0.2214,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": false,
+          "spectral_centroid_hz": 1316.0
+        },
+        {
+          "time": 5.642,
+          "pitch_hz": 172.1,
+          "rms_energy": 0.2674,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": false,
+          "spectral_centroid_hz": 1340.6
+        },
+        {
+          "time": 5.666,
+          "pitch_hz": 172.6,
+          "rms_energy": 0.2971,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": false,
+          "spectral_centroid_hz": 1366.0
+        },
+        {
+          "time": 5.689,
+          "pitch_hz": 173.4,
+          "rms_energy": 0.3,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": false,
+          "spectral_centroid_hz": 1368.3
+        },
+        {
+          "time": 5.712,
+          "pitch_hz": 174.1,
+          "rms_energy": 0.2997,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": false,
+          "spectral_centroid_hz": 1372.6
+        },
+        {
+          "time": 5.735,
+          "pitch_hz": 174.9,
+          "rms_energy": 0.2988,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": false,
+          "spectral_centroid_hz": 1378.2
+        },
+        {
+          "time": 5.759,
+          "pitch_hz": 175.7,
+          "rms_energy": 0.2975,
+          "speaking_rate_wpm": 135.6,
+          "is_pause": false,
+          "spectral_centroid_hz": 1383.4
+        },
+        {
+          "time": 5.782,
+          "pitch_hz": 176.5,
+          "rms_energy": 0.2966,
+          "speaking_rate_wpm": 135.6,
+          "is_pause": false,
+          "spectral_centroid_hz": 1389.0
+        },
+        {
+          "time": 5.805,
+          "pitch_hz": 177.2,
+          "rms_energy": 0.2922,
+          "speaking_rate_wpm": 135.6,
+          "is_pause": false,
+          "spectral_centroid_hz": 1395.3
+        },
+        {
+          "time": 5.828,
+          "pitch_hz": 177.7,
+          "rms_energy": 0.2653,
+          "speaking_rate_wpm": 135.6,
+          "is_pause": false,
+          "spectral_centroid_hz": 1387.4
+        },
+        {
+          "time": 5.851,
+          "pitch_hz": 178.1,
+          "rms_energy": 0.2212,
+          "speaking_rate_wpm": 135.6,
+          "is_pause": false,
+          "spectral_centroid_hz": 1374.9
+        },
+        {
+          "time": 5.875,
+          "pitch_hz": 178.6,
+          "rms_energy": 0.1648,
+          "speaking_rate_wpm": 135.6,
+          "is_pause": false,
+          "spectral_centroid_hz": 1414.1
+        },
+        {
+          "time": 5.898,
+          "pitch_hz": 179.1,
+          "rms_energy": 0.0873,
+          "speaking_rate_wpm": 135.6,
+          "is_pause": false,
+          "spectral_centroid_hz": 1678.2
+        },
+        {
+          "time": 5.921,
+          "pitch_hz": 168.6,
+          "rms_energy": 0.0529,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": false,
+          "spectral_centroid_hz": 2071.2
+        },
+        {
+          "time": 5.944,
+          "pitch_hz": 166.8,
+          "rms_energy": 0.1158,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": false,
+          "spectral_centroid_hz": 1432.2
+        },
+        {
+          "time": 5.968,
+          "pitch_hz": 165.6,
+          "rms_energy": 0.1644,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": false,
+          "spectral_centroid_hz": 1372.3
+        },
+        {
+          "time": 5.991,
+          "pitch_hz": 164.4,
+          "rms_energy": 0.2016,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": false,
+          "spectral_centroid_hz": 1384.1
+        },
+        {
+          "time": 6.014,
+          "pitch_hz": 163.3,
+          "rms_energy": 0.2221,
+          "speaking_rate_wpm": 135.6,
+          "is_pause": false,
+          "spectral_centroid_hz": 1388.4
+        },
+        {
+          "time": 6.037,
+          "pitch_hz": 161.2,
+          "rms_energy": 0.2281,
+          "speaking_rate_wpm": 135.6,
+          "is_pause": false,
+          "spectral_centroid_hz": 1373.4
+        },
+        {
+          "time": 6.06,
+          "pitch_hz": 159.0,
+          "rms_energy": 0.2293,
+          "speaking_rate_wpm": 135.6,
+          "is_pause": false,
+          "spectral_centroid_hz": 1352.2
+        },
+        {
+          "time": 6.084,
+          "pitch_hz": 157.2,
+          "rms_energy": 0.216,
+          "speaking_rate_wpm": 135.6,
+          "is_pause": false,
+          "spectral_centroid_hz": 1330.7
+        },
+        {
+          "time": 6.107,
+          "pitch_hz": 156.0,
+          "rms_energy": 0.1946,
+          "speaking_rate_wpm": 135.6,
+          "is_pause": false,
+          "spectral_centroid_hz": 1296.8
+        },
+        {
+          "time": 6.13,
+          "pitch_hz": 154.8,
+          "rms_energy": 0.1549,
+          "speaking_rate_wpm": 135.6,
+          "is_pause": false,
+          "spectral_centroid_hz": 1271.9
+        },
+        {
+          "time": 6.153,
+          "pitch_hz": 153.3,
+          "rms_energy": 0.0992,
+          "speaking_rate_wpm": 135.6,
+          "is_pause": false,
+          "spectral_centroid_hz": 1329.7
+        },
+        {
+          "time": 6.177,
+          "pitch_hz": 151.9,
+          "rms_energy": 0.0464,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": false,
+          "spectral_centroid_hz": 2054.6
+        },
+        {
+          "time": 6.2,
+          "pitch_hz": null,
+          "rms_energy": 0.0026,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": true,
+          "spectral_centroid_hz": 5540.8
+        },
+        {
+          "time": 6.223,
+          "pitch_hz": null,
+          "rms_energy": 0.0011,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": true,
+          "spectral_centroid_hz": 5525.2
+        },
+        {
+          "time": 6.246,
+          "pitch_hz": null,
+          "rms_energy": 0.0011,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": true,
+          "spectral_centroid_hz": 5603.4
+        },
+        {
+          "time": 6.269,
+          "pitch_hz": null,
+          "rms_energy": 0.0011,
+          "speaking_rate_wpm": 135.6,
+          "is_pause": true,
+          "spectral_centroid_hz": 5538.3
+        },
+        {
+          "time": 6.293,
+          "pitch_hz": null,
+          "rms_energy": 0.0011,
+          "speaking_rate_wpm": 135.6,
+          "is_pause": true,
+          "spectral_centroid_hz": 5461.1
+        },
+        {
+          "time": 6.316,
+          "pitch_hz": null,
+          "rms_energy": 0.0011,
+          "speaking_rate_wpm": 135.6,
+          "is_pause": true,
+          "spectral_centroid_hz": 5515.8
+        },
+        {
+          "time": 6.339,
+          "pitch_hz": null,
+          "rms_energy": 0.0011,
+          "speaking_rate_wpm": 135.6,
+          "is_pause": true,
+          "spectral_centroid_hz": 5521.3
+        },
+        {
+          "time": 6.362,
+          "pitch_hz": null,
+          "rms_energy": 0.0011,
+          "speaking_rate_wpm": 135.6,
+          "is_pause": true,
+          "spectral_centroid_hz": 5607.3
+        },
+        {
+          "time": 6.385,
+          "pitch_hz": null,
+          "rms_energy": 0.0011,
+          "speaking_rate_wpm": 135.6,
+          "is_pause": true,
+          "spectral_centroid_hz": 5621.6
+        },
+        {
+          "time": 6.409,
+          "pitch_hz": null,
+          "rms_energy": 0.0011,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": true,
+          "spectral_centroid_hz": 5694.8
+        },
+        {
+          "time": 6.432,
+          "pitch_hz": null,
+          "rms_energy": 0.0011,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": true,
+          "spectral_centroid_hz": 5534.3
+        },
+        {
+          "time": 6.455,
+          "pitch_hz": null,
+          "rms_energy": 0.0011,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": true,
+          "spectral_centroid_hz": 5447.1
+        },
+        {
+          "time": 6.478,
+          "pitch_hz": null,
+          "rms_energy": 0.001,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": true,
+          "spectral_centroid_hz": 5429.5
+        },
+        {
+          "time": 6.502,
+          "pitch_hz": null,
+          "rms_energy": 0.001,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": true,
+          "spectral_centroid_hz": 5453.2
+        },
+        {
+          "time": 6.525,
+          "pitch_hz": null,
+          "rms_energy": 0.0092,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": true,
+          "spectral_centroid_hz": 5188.9
+        },
+        {
+          "time": 6.548,
+          "pitch_hz": 144.3,
+          "rms_energy": 0.0642,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": false,
+          "spectral_centroid_hz": 1629.5
+        },
+        {
+          "time": 6.571,
+          "pitch_hz": 143.8,
+          "rms_energy": 0.1135,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": false,
+          "spectral_centroid_hz": 1208.6
+        },
+        {
+          "time": 6.594,
+          "pitch_hz": 143.4,
+          "rms_energy": 0.1459,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": false,
+          "spectral_centroid_hz": 1136.3
+        },
+        {
+          "time": 6.618,
+          "pitch_hz": 143.0,
+          "rms_energy": 0.1761,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": false,
+          "spectral_centroid_hz": 1150.1
+        },
+        {
+          "time": 6.641,
+          "pitch_hz": 142.4,
+          "rms_energy": 0.1899,
+          "speaking_rate_wpm": 135.6,
+          "is_pause": false,
+          "spectral_centroid_hz": 1153.0
+        },
+        {
+          "time": 6.664,
+          "pitch_hz": 142.0,
+          "rms_energy": 0.1721,
+          "speaking_rate_wpm": 135.6,
+          "is_pause": false,
+          "spectral_centroid_hz": 1136.1
+        },
+        {
+          "time": 6.687,
+          "pitch_hz": 141.6,
+          "rms_energy": 0.1459,
+          "speaking_rate_wpm": 135.6,
+          "is_pause": false,
+          "spectral_centroid_hz": 1116.9
+        },
+        {
+          "time": 6.711,
+          "pitch_hz": 141.2,
+          "rms_energy": 0.1071,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": false,
+          "spectral_centroid_hz": 1196.3
+        },
+        {
+          "time": 6.734,
+          "pitch_hz": 140.7,
+          "rms_energy": 0.0504,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": false,
+          "spectral_centroid_hz": 1759.8
+        },
+        {
+          "time": 6.757,
+          "pitch_hz": 155.8,
+          "rms_energy": 0.0854,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": false,
+          "spectral_centroid_hz": 1584.8
+        },
+        {
+          "time": 6.78,
+          "pitch_hz": 156.2,
+          "rms_energy": 0.151,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": false,
+          "spectral_centroid_hz": 1266.8
+        },
+        {
+          "time": 6.803,
+          "pitch_hz": 156.6,
+          "rms_energy": 0.2069,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": false,
+          "spectral_centroid_hz": 1229.0
+        },
+        {
+          "time": 6.827,
+          "pitch_hz": 157.0,
+          "rms_energy": 0.2504,
+          "speaking_rate_wpm": 123.0,
+          "is_pause": false,
+          "spectral_centroid_hz": 1253.8
+        },
+        {
+          "time": 6.85,
+          "pitch_hz": 157.5,
+          "rms_energy": 0.2674,
+          "speaking_rate_wpm": 124.0,
+          "is_pause": false,
+          "spectral_centroid_hz": 1269.5
+        },
+        {
+          "time": 6.873,
+          "pitch_hz": 158.2,
+          "rms_energy": 0.275,
+          "speaking_rate_wpm": 125.0,
+          "is_pause": false,
+          "spectral_centroid_hz": 1275.7
+        },
+        {
+          "time": 6.896,
+          "pitch_hz": 159.0,
+          "rms_energy": 0.2751,
+          "speaking_rate_wpm": 126.0,
+          "is_pause": false,
+          "spectral_centroid_hz": 1282.2
+        },
+        {
+          "time": 6.92,
+          "pitch_hz": 159.8,
+          "rms_energy": 0.2734,
+          "speaking_rate_wpm": 127.1,
+          "is_pause": false,
+          "spectral_centroid_hz": 1288.9
+        },
+        {
+          "time": 6.943,
+          "pitch_hz": 160.4,
+          "rms_energy": 0.2737,
+          "speaking_rate_wpm": 128.1,
+          "is_pause": false,
+          "spectral_centroid_hz": 1296.1
+        },
+        {
+          "time": 6.966,
+          "pitch_hz": 161.1,
+          "rms_energy": 0.2733,
+          "speaking_rate_wpm": 114.8,
+          "is_pause": false,
+          "spectral_centroid_hz": 1306.3
+        },
+        {
+          "time": 6.989,
+          "pitch_hz": 161.9,
+          "rms_energy": 0.2727,
+          "speaking_rate_wpm": 115.8,
+          "is_pause": false,
+          "spectral_centroid_hz": 1311.8
+        },
+        {
+          "time": 7.012,
+          "pitch_hz": 162.6,
+          "rms_energy": 0.2619,
+          "speaking_rate_wpm": 116.8,
+          "is_pause": false,
+          "spectral_centroid_hz": 1312.2
+        },
+        {
+          "time": 7.036,
+          "pitch_hz": 163.0,
+          "rms_energy": 0.2346,
+          "speaking_rate_wpm": 117.8,
+          "is_pause": false,
+          "spectral_centroid_hz": 1296.5
+        },
+        {
+          "time": 7.059,
+          "pitch_hz": 163.4,
+          "rms_energy": 0.1886,
+          "speaking_rate_wpm": 118.8,
+          "is_pause": false,
+          "spectral_centroid_hz": 1295.6
+        },
+        {
+          "time": 7.082,
+          "pitch_hz": 163.8,
+          "rms_energy": 0.126,
+          "speaking_rate_wpm": 119.8,
+          "is_pause": false,
+          "spectral_centroid_hz": 1371.0
+        },
+        {
+          "time": 7.105,
+          "pitch_hz": 164.4,
+          "rms_energy": 0.0517,
+          "speaking_rate_wpm": 120.9,
+          "is_pause": false,
+          "spectral_centroid_hz": 1892.9
+        },
+        {
+          "time": 7.129,
+          "pitch_hz": 149.2,
+          "rms_energy": 0.0645,
+          "speaking_rate_wpm": 122.0,
+          "is_pause": false,
+          "spectral_centroid_hz": 1629.6
+        },
+        {
+          "time": 7.152,
+          "pitch_hz": 148.8,
+          "rms_energy": 0.1107,
+          "speaking_rate_wpm": 123.0,
+          "is_pause": false,
+          "spectral_centroid_hz": 1241.0
+        },
+        {
+          "time": 7.175,
+          "pitch_hz": 148.3,
+          "rms_energy": 0.1509,
+          "speaking_rate_wpm": 124.2,
+          "is_pause": false,
+          "spectral_centroid_hz": 1175.5
+        },
+        {
+          "time": 7.198,
+          "pitch_hz": 148.0,
+          "rms_energy": 0.1761,
+          "speaking_rate_wpm": 109.6,
+          "is_pause": false,
+          "spectral_centroid_hz": 1191.9
+        },
+        {
+          "time": 7.221,
+          "pitch_hz": 147.4,
+          "rms_energy": 0.1893,
+          "speaking_rate_wpm": 110.6,
+          "is_pause": false,
+          "spectral_centroid_hz": 1192.8
+        },
+        {
+          "time": 7.245,
+          "pitch_hz": 147.0,
+          "rms_energy": 0.1741,
+          "speaking_rate_wpm": 111.7,
+          "is_pause": false,
+          "spectral_centroid_hz": 1175.4
+        },
+        {
+          "time": 7.268,
+          "pitch_hz": 146.5,
+          "rms_energy": 0.1408,
+          "speaking_rate_wpm": 112.7,
+          "is_pause": false,
+          "spectral_centroid_hz": 1157.5
+        },
+        {
+          "time": 7.291,
+          "pitch_hz": 146.2,
+          "rms_energy": 0.1074,
+          "speaking_rate_wpm": 113.8,
+          "is_pause": false,
+          "spectral_centroid_hz": 1252.0
+        },
+        {
+          "time": 7.314,
+          "pitch_hz": 145.7,
+          "rms_energy": 0.0529,
+          "speaking_rate_wpm": 114.8,
+          "is_pause": false,
+          "spectral_centroid_hz": 1868.3
+        },
+        {
+          "time": 7.338,
+          "pitch_hz": 159.0,
+          "rms_energy": 0.0782,
+          "speaking_rate_wpm": 115.9,
+          "is_pause": false,
+          "spectral_centroid_hz": 1624.7
+        },
+        {
+          "time": 7.361,
+          "pitch_hz": 158.3,
+          "rms_energy": 0.153,
+          "speaking_rate_wpm": 117.1,
+          "is_pause": false,
+          "spectral_centroid_hz": 1300.2
+        },
+        {
+          "time": 7.384,
+          "pitch_hz": 157.9,
+          "rms_energy": 0.1939,
+          "speaking_rate_wpm": 118.2,
+          "is_pause": false,
+          "spectral_centroid_hz": 1257.0
+        },
+        {
+          "time": 7.407,
+          "pitch_hz": 157.4,
+          "rms_energy": 0.2356,
+          "speaking_rate_wpm": 119.4,
+          "is_pause": false,
+          "spectral_centroid_hz": 1276.9
+        },
+        {
+          "time": 7.43,
+          "pitch_hz": 156.6,
+          "rms_energy": 0.2588,
+          "speaking_rate_wpm": 120.6,
+          "is_pause": false,
+          "spectral_centroid_hz": 1279.4
+        },
+        {
+          "time": 7.454,
+          "pitch_hz": 155.6,
+          "rms_energy": 0.2542,
+          "speaking_rate_wpm": 121.8,
+          "is_pause": false,
+          "spectral_centroid_hz": 1271.5
+        },
+        {
+          "time": 7.477,
+          "pitch_hz": 154.7,
+          "rms_energy": 0.2624,
+          "speaking_rate_wpm": 123.0,
+          "is_pause": false,
+          "spectral_centroid_hz": 1263.6
+        },
+        {
+          "time": 7.5,
+          "pitch_hz": 153.8,
+          "rms_energy": 0.2546,
+          "speaking_rate_wpm": 124.3,
+          "is_pause": false,
+          "spectral_centroid_hz": 1255.7
+        },
+        {
+          "time": 7.523,
+          "pitch_hz": 152.9,
+          "rms_energy": 0.2346,
+          "speaking_rate_wpm": 125.6,
+          "is_pause": false,
+          "spectral_centroid_hz": 1239.5
+        },
+        {
+          "time": 7.546,
+          "pitch_hz": 152.5,
+          "rms_energy": 0.2017,
+          "speaking_rate_wpm": 126.9,
+          "is_pause": false,
+          "spectral_centroid_hz": 1212.8
+        },
+        {
+          "time": 7.57,
+          "pitch_hz": 151.9,
+          "rms_energy": 0.1492,
+          "speaking_rate_wpm": 110.0,
+          "is_pause": false,
+          "spectral_centroid_hz": 1230.3
+        },
+        {
+          "time": 7.593,
+          "pitch_hz": 151.3,
+          "rms_energy": 0.0907,
+          "speaking_rate_wpm": 111.1,
+          "is_pause": false,
+          "spectral_centroid_hz": 1430.3
+        },
+        {
+          "time": 7.616,
+          "pitch_hz": 144.5,
+          "rms_energy": 0.0463,
+          "speaking_rate_wpm": 112.3,
+          "is_pause": false,
+          "spectral_centroid_hz": 2365.3
+        },
+        {
+          "time": 7.639,
+          "pitch_hz": 143.5,
+          "rms_energy": 0.1003,
+          "speaking_rate_wpm": 113.6,
+          "is_pause": false,
+          "spectral_centroid_hz": 1304.9
+        },
+        {
+          "time": 7.663,
+          "pitch_hz": 142.9,
+          "rms_energy": 0.1503,
+          "speaking_rate_wpm": 114.8,
+          "is_pause": false,
+          "spectral_centroid_hz": 1172.3
+        },
+        {
+          "time": 7.686,
+          "pitch_hz": 142.1,
+          "rms_energy": 0.1917,
+          "speaking_rate_wpm": 116.1,
+          "is_pause": false,
+          "spectral_centroid_hz": 1168.0
+        },
+        {
+          "time": 7.709,
+          "pitch_hz": 141.4,
+          "rms_energy": 0.2168,
+          "speaking_rate_wpm": 117.5,
+          "is_pause": false,
+          "spectral_centroid_hz": 1184.0
+        },
+        {
+          "time": 7.732,
+          "pitch_hz": 140.5,
+          "rms_energy": 0.2243,
+          "speaking_rate_wpm": 118.8,
+          "is_pause": false,
+          "spectral_centroid_hz": 1178.1
+        },
+        {
+          "time": 7.755,
+          "pitch_hz": 139.4,
+          "rms_energy": 0.2212,
+          "speaking_rate_wpm": 120.2,
+          "is_pause": false,
+          "spectral_centroid_hz": 1167.5
+        },
+        {
+          "time": 7.779,
+          "pitch_hz": 138.4,
+          "rms_energy": 0.1979,
+          "speaking_rate_wpm": 121.6,
+          "is_pause": false,
+          "spectral_centroid_hz": 1142.1
+        },
+        {
+          "time": 7.802,
+          "pitch_hz": 137.8,
+          "rms_energy": 0.1658,
+          "speaking_rate_wpm": 123.0,
+          "is_pause": false,
+          "spectral_centroid_hz": 1118.5
+        },
+        {
+          "time": 7.825,
+          "pitch_hz": 137.2,
+          "rms_energy": 0.1253,
+          "speaking_rate_wpm": 124.5,
+          "is_pause": false,
+          "spectral_centroid_hz": 1155.8
+        },
+        {
+          "time": 7.848,
+          "pitch_hz": 136.4,
+          "rms_energy": 0.0674,
+          "speaking_rate_wpm": 126.0,
+          "is_pause": false,
+          "spectral_centroid_hz": 1496.1
+        },
+        {
+          "time": 7.872,
+          "pitch_hz": 134.1,
+          "rms_energy": 0.0506,
+          "speaking_rate_wpm": 127.6,
+          "is_pause": false,
+          "spectral_centroid_hz": 1743.3
+        },
+        {
+          "time": 7.895,
+          "pitch_hz": 133.1,
+          "rms_energy": 0.119,
+          "speaking_rate_wpm": 129.2,
+          "is_pause": false,
+          "spectral_centroid_hz": 1148.1
+        },
+        {
+          "time": 7.918,
+          "pitch_hz": 132.4,
+          "rms_energy": 0.1708,
+          "speaking_rate_wpm": 130.8,
+          "is_pause": false,
+          "spectral_centroid_hz": 1078.0
+        },
+        {
+          "time": 7.941,
+          "pitch_hz": 131.6,
+          "rms_energy": 0.2109,
+          "speaking_rate_wpm": 132.5,
+          "is_pause": false,
+          "spectral_centroid_hz": 1087.8
+        },
+        {
+          "time": 7.964,
+          "pitch_hz": 130.8,
+          "rms_energy": 0.2368,
+          "speaking_rate_wpm": 134.2,
+          "is_pause": false,
+          "spectral_centroid_hz": 1093.0
+        },
+        {
+          "time": 7.988,
+          "pitch_hz": 129.6,
+          "rms_energy": 0.2407,
+          "speaking_rate_wpm": 136.0,
+          "is_pause": false,
+          "spectral_centroid_hz": 1084.2
+        },
+        {
+          "time": 8.011,
+          "pitch_hz": 128.2,
+          "rms_energy": 0.2396,
+          "speaking_rate_wpm": 137.8,
+          "is_pause": false,
+          "spectral_centroid_hz": 1072.3
+        },
+        {
+          "time": 8.034,
+          "pitch_hz": 126.8,
+          "rms_energy": 0.2384,
+          "speaking_rate_wpm": 139.7,
+          "is_pause": false,
+          "spectral_centroid_hz": 1059.0
+        },
+        {
+          "time": 8.057,
+          "pitch_hz": 125.5,
+          "rms_energy": 0.2405,
+          "speaking_rate_wpm": 141.6,
+          "is_pause": false,
+          "spectral_centroid_hz": 1046.8
+        },
+        {
+          "time": 8.081,
+          "pitch_hz": 124.2,
+          "rms_energy": 0.2439,
+          "speaking_rate_wpm": 143.6,
+          "is_pause": false,
+          "spectral_centroid_hz": 1035.7
+        },
+        {
+          "time": 8.104,
+          "pitch_hz": 122.8,
+          "rms_energy": 0.2457,
+          "speaking_rate_wpm": 145.6,
+          "is_pause": false,
+          "spectral_centroid_hz": 1024.4
+        },
+        {
+          "time": 8.127,
+          "pitch_hz": 121.4,
+          "rms_energy": 0.2454,
+          "speaking_rate_wpm": 147.7,
+          "is_pause": false,
+          "spectral_centroid_hz": 1013.9
+        },
+        {
+          "time": 8.15,
+          "pitch_hz": 120.2,
+          "rms_energy": 0.239,
+          "speaking_rate_wpm": 124.8,
+          "is_pause": false,
+          "spectral_centroid_hz": 1003.1
+        },
+        {
+          "time": 8.173,
+          "pitch_hz": 119.1,
+          "rms_energy": 0.2204,
+          "speaking_rate_wpm": 126.7,
+          "is_pause": false,
+          "spectral_centroid_hz": 986.5
+        },
+        {
+          "time": 8.197,
+          "pitch_hz": 118.3,
+          "rms_energy": 0.1839,
+          "speaking_rate_wpm": 128.6,
+          "is_pause": false,
+          "spectral_centroid_hz": 958.7
+        },
+        {
+          "time": 8.22,
+          "pitch_hz": 117.5,
+          "rms_energy": 0.1387,
+          "speaking_rate_wpm": 130.5,
+          "is_pause": false,
+          "spectral_centroid_hz": 974.5
+        },
+        {
+          "time": 8.243,
+          "pitch_hz": 116.8,
+          "rms_energy": 0.0858,
+          "speaking_rate_wpm": 132.5,
+          "is_pause": false,
+          "spectral_centroid_hz": 1206.7
+        },
+        {
+          "time": 8.266,
+          "pitch_hz": 115.7,
+          "rms_energy": 0.0243,
+          "speaking_rate_wpm": 134.6,
+          "is_pause": false,
+          "spectral_centroid_hz": 3168.9
+        }
+      ]
+    },
+    "participant": {
+      "summary": {
+        "duration_seconds": 8.289,
+        "estimated_wpm": 145.0,
+        "total_pauses": 3,
+        "pause_time_ratio": 0.151,
+        "mean_pitch_hz": 135.5,
+        "std_pitch_hz": 0.3,
+        "pitch_semitone_range": 0.09,
+        "mean_rms_energy": 0.1539,
+        "std_rms_energy": 0.0945,
+        "mean_spectral_centroid_hz": 1858.5,
+        "mean_zero_crossing_rate": 0.1618
+      },
+      "timeseries": [
+        {
+          "time": 0.0,
+          "pitch_hz": 135.2,
+          "rms_energy": 0.115,
+          "speaking_rate_wpm": 136.7,
+          "is_pause": false,
+          "spectral_centroid_hz": 1028.1
+        },
+        {
+          "time": 0.023,
+          "pitch_hz": 135.2,
+          "rms_energy": 0.1647,
+          "speaking_rate_wpm": 134.6,
+          "is_pause": false,
+          "spectral_centroid_hz": 1024.1
+        },
+        {
+          "time": 0.046,
+          "pitch_hz": 135.3,
+          "rms_energy": 0.2024,
+          "speaking_rate_wpm": 159.0,
+          "is_pause": false,
+          "spectral_centroid_hz": 1022.8
+        },
+        {
+          "time": 0.07,
+          "pitch_hz": 135.3,
+          "rms_energy": 0.2296,
+          "speaking_rate_wpm": 156.6,
+          "is_pause": false,
+          "spectral_centroid_hz": 1025.3
+        },
+        {
+          "time": 0.093,
+          "pitch_hz": 135.4,
+          "rms_energy": 0.2359,
+          "speaking_rate_wpm": 154.3,
+          "is_pause": false,
+          "spectral_centroid_hz": 1026.0
+        },
+        {
+          "time": 0.116,
+          "pitch_hz": 135.5,
+          "rms_energy": 0.2398,
+          "speaking_rate_wpm": 152.0,
+          "is_pause": false,
+          "spectral_centroid_hz": 1027.1
+        },
+        {
+          "time": 0.139,
+          "pitch_hz": 135.6,
+          "rms_energy": 0.2367,
+          "speaking_rate_wpm": 149.8,
+          "is_pause": false,
+          "spectral_centroid_hz": 1028.5
+        },
+        {
+          "time": 0.163,
+          "pitch_hz": 135.7,
+          "rms_energy": 0.2119,
+          "speaking_rate_wpm": 147.7,
+          "is_pause": false,
+          "spectral_centroid_hz": 1029.2
+        },
+        {
+          "time": 0.186,
+          "pitch_hz": 135.8,
+          "rms_energy": 0.1757,
+          "speaking_rate_wpm": 145.6,
+          "is_pause": false,
+          "spectral_centroid_hz": 1033.1
+        },
+        {
+          "time": 0.209,
+          "pitch_hz": 135.8,
+          "rms_energy": 0.123,
+          "speaking_rate_wpm": 143.6,
+          "is_pause": false,
+          "spectral_centroid_hz": 1122.2
+        },
+        {
+          "time": 0.232,
+          "pitch_hz": 135.9,
+          "rms_energy": 0.0545,
+          "speaking_rate_wpm": 141.6,
+          "is_pause": false,
+          "spectral_centroid_hz": 1568.1
+        },
+        {
+          "time": 0.255,
+          "pitch_hz": 135.1,
+          "rms_energy": 0.0783,
+          "speaking_rate_wpm": 139.7,
+          "is_pause": false,
+          "spectral_centroid_hz": 1525.1
+        },
+        {
+          "time": 0.279,
+          "pitch_hz": 135.2,
+          "rms_energy": 0.1517,
+          "speaking_rate_wpm": 137.8,
+          "is_pause": false,
+          "spectral_centroid_hz": 1110.2
+        },
+        {
+          "time": 0.302,
+          "pitch_hz": 135.2,
+          "rms_energy": 0.202,
+          "speaking_rate_wpm": 136.0,
+          "is_pause": false,
+          "spectral_centroid_hz": 1029.0
+        },
+        {
+          "time": 0.325,
+          "pitch_hz": 135.2,
+          "rms_energy": 0.2418,
+          "speaking_rate_wpm": 134.2,
+          "is_pause": false,
+          "spectral_centroid_hz": 1022.4
+        },
+        {
+          "time": 0.348,
+          "pitch_hz": 135.3,
+          "rms_energy": 0.266,
+          "speaking_rate_wpm": 132.5,
+          "is_pause": false,
+          "spectral_centroid_hz": 1023.8
+        },
+        {
+          "time": 0.372,
+          "pitch_hz": 135.4,
+          "rms_energy": 0.273,
+          "speaking_rate_wpm": 130.8,
+          "is_pause": false,
+          "spectral_centroid_hz": 1024.2
+        },
+        {
+          "time": 0.395,
+          "pitch_hz": 135.5,
+          "rms_energy": 0.2764,
+          "speaking_rate_wpm": 129.2,
+          "is_pause": false,
+          "spectral_centroid_hz": 1024.7
+        },
+        {
+          "time": 0.418,
+          "pitch_hz": 135.5,
+          "rms_energy": 0.2768,
+          "speaking_rate_wpm": 127.6,
+          "is_pause": false,
+          "spectral_centroid_hz": 1025.8
+        },
+        {
+          "time": 0.441,
+          "pitch_hz": 135.6,
+          "rms_energy": 0.276,
+          "speaking_rate_wpm": 147.1,
+          "is_pause": false,
+          "spectral_centroid_hz": 1026.9
+        },
+        {
+          "time": 0.464,
+          "pitch_hz": 135.7,
+          "rms_energy": 0.2679,
+          "speaking_rate_wpm": 145.3,
+          "is_pause": false,
+          "spectral_centroid_hz": 1027.6
+        },
+        {
+          "time": 0.488,
+          "pitch_hz": 135.8,
+          "rms_energy": 0.2417,
+          "speaking_rate_wpm": 143.6,
+          "is_pause": false,
+          "spectral_centroid_hz": 1027.4
+        },
+        {
+          "time": 0.511,
+          "pitch_hz": 135.8,
+          "rms_energy": 0.2021,
+          "speaking_rate_wpm": 141.9,
+          "is_pause": false,
+          "spectral_centroid_hz": 1027.9
+        },
+        {
+          "time": 0.534,
+          "pitch_hz": 135.9,
+          "rms_energy": 0.152,
+          "speaking_rate_wpm": 140.2,
+          "is_pause": false,
+          "spectral_centroid_hz": 1079.0
+        },
+        {
+          "time": 0.557,
+          "pitch_hz": 135.9,
+          "rms_energy": 0.0824,
+          "speaking_rate_wpm": 138.6,
+          "is_pause": false,
+          "spectral_centroid_hz": 1361.1
+        },
+        {
+          "time": 0.58,
+          "pitch_hz": 135.3,
+          "rms_energy": 0.05,
+          "speaking_rate_wpm": 137.0,
+          "is_pause": false,
+          "spectral_centroid_hz": 1955.1
+        },
+        {
+          "time": 0.604,
+          "pitch_hz": 135.2,
+          "rms_energy": 0.1089,
+          "speaking_rate_wpm": 135.5,
+          "is_pause": false,
+          "spectral_centroid_hz": 1167.0
+        },
+        {
+          "time": 0.627,
+          "pitch_hz": 135.3,
+          "rms_energy": 0.1554,
+          "speaking_rate_wpm": 134.0,
+          "is_pause": false,
+          "spectral_centroid_hz": 1037.4
+        },
+        {
+          "time": 0.65,
+          "pitch_hz": 135.4,
+          "rms_energy": 0.1979,
+          "speaking_rate_wpm": 132.5,
+          "is_pause": false,
+          "spectral_centroid_hz": 1024.2
+        },
+        {
+          "time": 0.673,
+          "pitch_hz": 135.4,
+          "rms_energy": 0.2225,
+          "speaking_rate_wpm": 131.1,
+          "is_pause": false,
+          "spectral_centroid_hz": 1027.4
+        },
+        {
+          "time": 0.697,
+          "pitch_hz": 135.5,
+          "rms_energy": 0.2257,
+          "speaking_rate_wpm": 129.7,
+          "is_pause": false,
+          "spectral_centroid_hz": 1028.9
+        },
+        {
+          "time": 0.72,
+          "pitch_hz": 135.6,
+          "rms_energy": 0.2062,
+          "speaking_rate_wpm": 128.3,
+          "is_pause": false,
+          "spectral_centroid_hz": 1028.6
+        },
+        {
+          "time": 0.743,
+          "pitch_hz": 135.7,
+          "rms_energy": 0.1666,
+          "speaking_rate_wpm": 126.9,
+          "is_pause": false,
+          "spectral_centroid_hz": 1030.0
+        },
+        {
+          "time": 0.766,
+          "pitch_hz": 135.8,
+          "rms_energy": 0.1244,
+          "speaking_rate_wpm": 125.6,
+          "is_pause": false,
+          "spectral_centroid_hz": 1105.4
+        },
+        {
+          "time": 0.789,
+          "pitch_hz": 135.9,
+          "rms_energy": 0.0645,
+          "speaking_rate_wpm": 124.3,
+          "is_pause": false,
+          "spectral_centroid_hz": 1499.9
+        },
+        {
+          "time": 0.813,
+          "pitch_hz": 135.3,
+          "rms_energy": 0.0601,
+          "speaking_rate_wpm": 123.0,
+          "is_pause": false,
+          "spectral_centroid_hz": 1636.8
+        },
+        {
+          "time": 0.836,
+          "pitch_hz": 135.2,
+          "rms_energy": 0.1496,
+          "speaking_rate_wpm": 121.8,
+          "is_pause": false,
+          "spectral_centroid_hz": 1114.9
+        },
+        {
+          "time": 0.859,
+          "pitch_hz": 135.2,
+          "rms_energy": 0.2011,
+          "speaking_rate_wpm": 120.6,
+          "is_pause": false,
+          "spectral_centroid_hz": 1029.7
+        },
+        {
+          "time": 0.882,
+          "pitch_hz": 135.2,
+          "rms_energy": 0.2418,
+          "speaking_rate_wpm": 119.4,
+          "is_pause": false,
+          "spectral_centroid_hz": 1022.6
+        },
+        {
+          "time": 0.906,
+          "pitch_hz": 135.3,
+          "rms_energy": 0.2699,
+          "speaking_rate_wpm": 118.2,
+          "is_pause": false,
+          "spectral_centroid_hz": 1024.1
+        },
+        {
+          "time": 0.929,
+          "pitch_hz": 135.4,
+          "rms_energy": 0.2676,
+          "speaking_rate_wpm": 117.1,
+          "is_pause": false,
+          "spectral_centroid_hz": 1024.7
+        },
+        {
+          "time": 0.952,
+          "pitch_hz": 135.5,
+          "rms_energy": 0.2677,
+          "speaking_rate_wpm": 115.9,
+          "is_pause": false,
+          "spectral_centroid_hz": 1025.3
+        },
+        {
+          "time": 0.975,
+          "pitch_hz": 135.6,
+          "rms_energy": 0.2687,
+          "speaking_rate_wpm": 114.8,
+          "is_pause": false,
+          "spectral_centroid_hz": 1026.5
+        },
+        {
+          "time": 0.998,
+          "pitch_hz": 135.7,
+          "rms_energy": 0.2745,
+          "speaking_rate_wpm": 113.8,
+          "is_pause": false,
+          "spectral_centroid_hz": 1027.6
+        },
+        {
+          "time": 1.022,
+          "pitch_hz": 135.7,
+          "rms_energy": 0.2552,
+          "speaking_rate_wpm": 112.7,
+          "is_pause": false,
+          "spectral_centroid_hz": 1027.6
+        },
+        {
+          "time": 1.045,
+          "pitch_hz": 135.8,
+          "rms_energy": 0.2189,
+          "speaking_rate_wpm": 111.7,
+          "is_pause": false,
+          "spectral_centroid_hz": 1027.9
+        },
+        {
+          "time": 1.068,
+          "pitch_hz": 135.8,
+          "rms_energy": 0.1713,
+          "speaking_rate_wpm": 110.6,
+          "is_pause": false,
+          "spectral_centroid_hz": 1055.5
+        },
+        {
+          "time": 1.091,
+          "pitch_hz": 135.9,
+          "rms_energy": 0.0919,
+          "speaking_rate_wpm": 125.3,
+          "is_pause": false,
+          "spectral_centroid_hz": 1253.6
+        },
+        {
+          "time": 1.115,
+          "pitch_hz": 135.7,
+          "rms_energy": 0.0391,
+          "speaking_rate_wpm": 124.2,
+          "is_pause": false,
+          "spectral_centroid_hz": 2474.6
+        },
+        {
+          "time": 1.138,
+          "pitch_hz": 135.3,
+          "rms_energy": 0.0905,
+          "speaking_rate_wpm": 123.0,
+          "is_pause": false,
+          "spectral_centroid_hz": 1277.8
+        },
+        {
+          "time": 1.161,
+          "pitch_hz": 135.2,
+          "rms_energy": 0.1417,
+          "speaking_rate_wpm": 122.0,
+          "is_pause": false,
+          "spectral_centroid_hz": 1059.0
+        },
+        {
+          "time": 1.184,
+          "pitch_hz": 135.3,
+          "rms_energy": 0.1752,
+          "speaking_rate_wpm": 120.9,
+          "is_pause": false,
+          "spectral_centroid_hz": 1022.9
+        },
+        {
+          "time": 1.207,
+          "pitch_hz": 135.3,
+          "rms_energy": 0.2011,
+          "speaking_rate_wpm": 119.8,
+          "is_pause": false,
+          "spectral_centroid_hz": 1025.2
+        },
+        {
+          "time": 1.231,
+          "pitch_hz": 135.4,
+          "rms_energy": 0.2081,
+          "speaking_rate_wpm": 118.8,
+          "is_pause": false,
+          "spectral_centroid_hz": 1026.0
+        },
+        {
+          "time": 1.254,
+          "pitch_hz": 135.5,
+          "rms_energy": 0.2045,
+          "speaking_rate_wpm": 117.8,
+          "is_pause": false,
+          "spectral_centroid_hz": 1027.2
+        },
+        {
+          "time": 1.277,
+          "pitch_hz": 135.6,
+          "rms_energy": 0.2018,
+          "speaking_rate_wpm": 116.8,
+          "is_pause": false,
+          "spectral_centroid_hz": 1028.6
+        },
+        {
+          "time": 1.3,
+          "pitch_hz": 135.7,
+          "rms_energy": 0.1836,
+          "speaking_rate_wpm": 115.8,
+          "is_pause": false,
+          "spectral_centroid_hz": 1029.3
+        },
+        {
+          "time": 1.324,
+          "pitch_hz": 135.8,
+          "rms_energy": 0.1531,
+          "speaking_rate_wpm": 129.2,
+          "is_pause": false,
+          "spectral_centroid_hz": 1031.7
+        },
+        {
+          "time": 1.347,
+          "pitch_hz": 135.8,
+          "rms_energy": 0.1143,
+          "speaking_rate_wpm": 128.1,
+          "is_pause": false,
+          "spectral_centroid_hz": 1124.6
+        },
+        {
+          "time": 1.37,
+          "pitch_hz": 135.9,
+          "rms_energy": 0.0596,
+          "speaking_rate_wpm": 127.1,
+          "is_pause": false,
+          "spectral_centroid_hz": 1607.9
+        },
+        {
+          "time": 1.393,
+          "pitch_hz": 135.4,
+          "rms_energy": 0.0583,
+          "speaking_rate_wpm": 126.0,
+          "is_pause": false,
+          "spectral_centroid_hz": 1774.2
+        },
+        {
+          "time": 1.416,
+          "pitch_hz": 135.2,
+          "rms_energy": 0.1237,
+          "speaking_rate_wpm": 125.0,
+          "is_pause": false,
+          "spectral_centroid_hz": 1143.1
+        },
+        {
+          "time": 1.44,
+          "pitch_hz": 135.3,
+          "rms_energy": 0.1662,
+          "speaking_rate_wpm": 124.0,
+          "is_pause": false,
+          "spectral_centroid_hz": 1033.0
+        },
+        {
+          "time": 1.463,
+          "pitch_hz": 135.3,
+          "rms_energy": 0.1991,
+          "speaking_rate_wpm": 123.0,
+          "is_pause": false,
+          "spectral_centroid_hz": 1024.2
+        },
+        {
+          "time": 1.486,
+          "pitch_hz": 135.4,
+          "rms_energy": 0.2201,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": false,
+          "spectral_centroid_hz": 1026.4
+        },
+        {
+          "time": 1.509,
+          "pitch_hz": 135.5,
+          "rms_energy": 0.2203,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": false,
+          "spectral_centroid_hz": 1027.5
+        },
+        {
+          "time": 1.533,
+          "pitch_hz": 135.6,
+          "rms_energy": 0.2139,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": false,
+          "spectral_centroid_hz": 1028.7
+        },
+        {
+          "time": 1.556,
+          "pitch_hz": 135.7,
+          "rms_energy": 0.1905,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": false,
+          "spectral_centroid_hz": 1027.7
+        },
+        {
+          "time": 1.579,
+          "pitch_hz": 135.7,
+          "rms_energy": 0.1558,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": false,
+          "spectral_centroid_hz": 1036.0
+        },
+        {
+          "time": 1.602,
+          "pitch_hz": 135.8,
+          "rms_energy": 0.1103,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": false,
+          "spectral_centroid_hz": 1155.6
+        },
+        {
+          "time": 1.625,
+          "pitch_hz": 135.9,
+          "rms_energy": 0.0534,
+          "speaking_rate_wpm": 108.5,
+          "is_pause": false,
+          "spectral_centroid_hz": 1829.2
+        },
+        {
+          "time": 1.649,
+          "pitch_hz": 135.1,
+          "rms_energy": 0.0838,
+          "speaking_rate_wpm": 108.5,
+          "is_pause": false,
+          "spectral_centroid_hz": 1392.9
+        },
+        {
+          "time": 1.672,
+          "pitch_hz": 135.1,
+          "rms_energy": 0.1628,
+          "speaking_rate_wpm": 108.5,
+          "is_pause": false,
+          "spectral_centroid_hz": 1082.1
+        },
+        {
+          "time": 1.695,
+          "pitch_hz": 135.2,
+          "rms_energy": 0.2251,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": false,
+          "spectral_centroid_hz": 1024.4
+        },
+        {
+          "time": 1.718,
+          "pitch_hz": 135.2,
+          "rms_energy": 0.2675,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": false,
+          "spectral_centroid_hz": 1021.6
+        },
+        {
+          "time": 1.741,
+          "pitch_hz": 135.2,
+          "rms_energy": 0.2917,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": false,
+          "spectral_centroid_hz": 1022.5
+        },
+        {
+          "time": 1.765,
+          "pitch_hz": 135.3,
+          "rms_energy": 0.2925,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": false,
+          "spectral_centroid_hz": 1023.0
+        },
+        {
+          "time": 1.788,
+          "pitch_hz": 135.4,
+          "rms_energy": 0.2851,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": false,
+          "spectral_centroid_hz": 1023.3
+        },
+        {
+          "time": 1.811,
+          "pitch_hz": 135.4,
+          "rms_energy": 0.2833,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": false,
+          "spectral_centroid_hz": 1023.6
+        },
+        {
+          "time": 1.834,
+          "pitch_hz": 135.5,
+          "rms_energy": 0.2833,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": false,
+          "spectral_centroid_hz": 1024.4
+        },
+        {
+          "time": 1.858,
+          "pitch_hz": 135.6,
+          "rms_energy": 0.2913,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": false,
+          "spectral_centroid_hz": 1025.4
+        },
+        {
+          "time": 1.881,
+          "pitch_hz": 135.6,
+          "rms_energy": 0.2925,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": false,
+          "spectral_centroid_hz": 1026.4
+        },
+        {
+          "time": 1.904,
+          "pitch_hz": 135.7,
+          "rms_energy": 0.2928,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": false,
+          "spectral_centroid_hz": 1026.9
+        },
+        {
+          "time": 1.927,
+          "pitch_hz": 135.8,
+          "rms_energy": 0.2867,
+          "speaking_rate_wpm": 108.5,
+          "is_pause": false,
+          "spectral_centroid_hz": 1026.9
+        },
+        {
+          "time": 1.95,
+          "pitch_hz": 135.8,
+          "rms_energy": 0.2509,
+          "speaking_rate_wpm": 108.5,
+          "is_pause": false,
+          "spectral_centroid_hz": 1026.8
+        },
+        {
+          "time": 1.974,
+          "pitch_hz": 135.9,
+          "rms_energy": 0.2066,
+          "speaking_rate_wpm": 108.5,
+          "is_pause": false,
+          "spectral_centroid_hz": 1029.4
+        },
+        {
+          "time": 1.997,
+          "pitch_hz": 135.9,
+          "rms_energy": 0.1497,
+          "speaking_rate_wpm": 108.5,
+          "is_pause": false,
+          "spectral_centroid_hz": 1099.1
+        },
+        {
+          "time": 2.02,
+          "pitch_hz": 135.9,
+          "rms_energy": 0.0751,
+          "speaking_rate_wpm": 108.5,
+          "is_pause": false,
+          "spectral_centroid_hz": 1486.6
+        },
+        {
+          "time": 2.043,
+          "pitch_hz": 136.1,
+          "rms_energy": 0.0178,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": false,
+          "spectral_centroid_hz": 4656.2
+        },
+        {
+          "time": 2.067,
+          "pitch_hz": null,
+          "rms_energy": 0.0011,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": true,
+          "spectral_centroid_hz": 5444.9
+        },
+        {
+          "time": 2.09,
+          "pitch_hz": null,
+          "rms_energy": 0.0011,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": true,
+          "spectral_centroid_hz": 5562.0
+        },
+        {
+          "time": 2.113,
+          "pitch_hz": null,
+          "rms_energy": 0.0011,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": true,
+          "spectral_centroid_hz": 5462.1
+        },
+        {
+          "time": 2.136,
+          "pitch_hz": null,
+          "rms_energy": 0.0011,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": true,
+          "spectral_centroid_hz": 5520.4
+        },
+        {
+          "time": 2.159,
+          "pitch_hz": null,
+          "rms_energy": 0.0011,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": true,
+          "spectral_centroid_hz": 5506.2
+        },
+        {
+          "time": 2.183,
+          "pitch_hz": null,
+          "rms_energy": 0.0011,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": true,
+          "spectral_centroid_hz": 5465.3
+        },
+        {
+          "time": 2.206,
+          "pitch_hz": null,
+          "rms_energy": 0.0011,
+          "speaking_rate_wpm": 108.5,
+          "is_pause": true,
+          "spectral_centroid_hz": 5612.9
+        },
+        {
+          "time": 2.229,
+          "pitch_hz": null,
+          "rms_energy": 0.0011,
+          "speaking_rate_wpm": 108.5,
+          "is_pause": true,
+          "spectral_centroid_hz": 5593.5
+        },
+        {
+          "time": 2.252,
+          "pitch_hz": null,
+          "rms_energy": 0.0011,
+          "speaking_rate_wpm": 108.5,
+          "is_pause": true,
+          "spectral_centroid_hz": 5557.1
+        },
+        {
+          "time": 2.276,
+          "pitch_hz": null,
+          "rms_energy": 0.0011,
+          "speaking_rate_wpm": 108.5,
+          "is_pause": true,
+          "spectral_centroid_hz": 5411.2
+        },
+        {
+          "time": 2.299,
+          "pitch_hz": null,
+          "rms_energy": 0.0011,
+          "speaking_rate_wpm": 108.5,
+          "is_pause": true,
+          "spectral_centroid_hz": 5538.2
+        },
+        {
+          "time": 2.322,
+          "pitch_hz": null,
+          "rms_energy": 0.0011,
+          "speaking_rate_wpm": 108.5,
+          "is_pause": true,
+          "spectral_centroid_hz": 5626.3
+        },
+        {
+          "time": 2.345,
+          "pitch_hz": null,
+          "rms_energy": 0.0011,
+          "speaking_rate_wpm": 108.5,
+          "is_pause": true,
+          "spectral_centroid_hz": 5588.2
+        },
+        {
+          "time": 2.368,
+          "pitch_hz": null,
+          "rms_energy": 0.0011,
+          "speaking_rate_wpm": 108.5,
+          "is_pause": true,
+          "spectral_centroid_hz": 5483.8
+        },
+        {
+          "time": 2.392,
+          "pitch_hz": null,
+          "rms_energy": 0.0011,
+          "speaking_rate_wpm": 108.5,
+          "is_pause": true,
+          "spectral_centroid_hz": 5479.8
+        },
+        {
+          "time": 2.415,
+          "pitch_hz": null,
+          "rms_energy": 0.0011,
+          "speaking_rate_wpm": 108.5,
+          "is_pause": true,
+          "spectral_centroid_hz": 5559.9
+        },
+        {
+          "time": 2.438,
+          "pitch_hz": 135.1,
+          "rms_energy": 0.0407,
+          "speaking_rate_wpm": 108.5,
+          "is_pause": false,
+          "spectral_centroid_hz": 2295.6
+        },
+        {
+          "time": 2.461,
+          "pitch_hz": 135.2,
+          "rms_energy": 0.0999,
+          "speaking_rate_wpm": 108.5,
+          "is_pause": false,
+          "spectral_centroid_hz": 1214.0
+        },
+        {
+          "time": 2.485,
+          "pitch_hz": 135.3,
+          "rms_energy": 0.1428,
+          "speaking_rate_wpm": 108.5,
+          "is_pause": false,
+          "spectral_centroid_hz": 1046.3
+        },
+        {
+          "time": 2.508,
+          "pitch_hz": 135.3,
+          "rms_energy": 0.1758,
+          "speaking_rate_wpm": 94.9,
+          "is_pause": false,
+          "spectral_centroid_hz": 1023.9
+        },
+        {
+          "time": 2.531,
+          "pitch_hz": 135.4,
+          "rms_energy": 0.1995,
+          "speaking_rate_wpm": 94.9,
+          "is_pause": false,
+          "spectral_centroid_hz": 1027.4
+        },
+        {
+          "time": 2.554,
+          "pitch_hz": 135.5,
+          "rms_energy": 0.2093,
+          "speaking_rate_wpm": 94.9,
+          "is_pause": false,
+          "spectral_centroid_hz": 1028.8
+        },
+        {
+          "time": 2.577,
+          "pitch_hz": 135.6,
+          "rms_energy": 0.1926,
+          "speaking_rate_wpm": 94.9,
+          "is_pause": false,
+          "spectral_centroid_hz": 1028.8
+        },
+        {
+          "time": 2.601,
+          "pitch_hz": 135.7,
+          "rms_energy": 0.1637,
+          "speaking_rate_wpm": 94.9,
+          "is_pause": false,
+          "spectral_centroid_hz": 1028.9
+        },
+        {
+          "time": 2.624,
+          "pitch_hz": 135.8,
+          "rms_energy": 0.1274,
+          "speaking_rate_wpm": 94.9,
+          "is_pause": false,
+          "spectral_centroid_hz": 1085.9
+        },
+        {
+          "time": 2.647,
+          "pitch_hz": 135.9,
+          "rms_energy": 0.0626,
+          "speaking_rate_wpm": 94.9,
+          "is_pause": false,
+          "spectral_centroid_hz": 1429.7
+        },
+        {
+          "time": 2.67,
+          "pitch_hz": 135.1,
+          "rms_energy": 0.0525,
+          "speaking_rate_wpm": 94.9,
+          "is_pause": false,
+          "spectral_centroid_hz": 1864.2
+        },
+        {
+          "time": 2.694,
+          "pitch_hz": 135.2,
+          "rms_energy": 0.1243,
+          "speaking_rate_wpm": 94.9,
+          "is_pause": false,
+          "spectral_centroid_hz": 1152.1
+        },
+        {
+          "time": 2.717,
+          "pitch_hz": 135.2,
+          "rms_energy": 0.1774,
+          "speaking_rate_wpm": 94.9,
+          "is_pause": false,
+          "spectral_centroid_hz": 1035.4
+        },
+        {
+          "time": 2.74,
+          "pitch_hz": 135.3,
+          "rms_energy": 0.2259,
+          "speaking_rate_wpm": 81.4,
+          "is_pause": false,
+          "spectral_centroid_hz": 1022.6
+        },
+        {
+          "time": 2.763,
+          "pitch_hz": 135.3,
+          "rms_energy": 0.2543,
+          "speaking_rate_wpm": 81.4,
+          "is_pause": false,
+          "spectral_centroid_hz": 1024.3
+        },
+        {
+          "time": 2.786,
+          "pitch_hz": 135.4,
+          "rms_energy": 0.2603,
+          "speaking_rate_wpm": 81.4,
+          "is_pause": false,
+          "spectral_centroid_hz": 1024.9
+        },
+        {
+          "time": 2.81,
+          "pitch_hz": 135.5,
+          "rms_energy": 0.2597,
+          "speaking_rate_wpm": 81.4,
+          "is_pause": false,
+          "spectral_centroid_hz": 1025.6
+        },
+        {
+          "time": 2.833,
+          "pitch_hz": 135.6,
+          "rms_energy": 0.2522,
+          "speaking_rate_wpm": 81.4,
+          "is_pause": false,
+          "spectral_centroid_hz": 1027.0
+        },
+        {
+          "time": 2.856,
+          "pitch_hz": 135.7,
+          "rms_energy": 0.2489,
+          "speaking_rate_wpm": 81.4,
+          "is_pause": false,
+          "spectral_centroid_hz": 1028.1
+        },
+        {
+          "time": 2.879,
+          "pitch_hz": 135.7,
+          "rms_energy": 0.2262,
+          "speaking_rate_wpm": 81.4,
+          "is_pause": false,
+          "spectral_centroid_hz": 1027.9
+        },
+        {
+          "time": 2.902,
+          "pitch_hz": 135.8,
+          "rms_energy": 0.1893,
+          "speaking_rate_wpm": 81.4,
+          "is_pause": false,
+          "spectral_centroid_hz": 1029.2
+        },
+        {
+          "time": 2.926,
+          "pitch_hz": 135.8,
+          "rms_energy": 0.1418,
+          "speaking_rate_wpm": 81.4,
+          "is_pause": false,
+          "spectral_centroid_hz": 1098.6
+        },
+        {
+          "time": 2.949,
+          "pitch_hz": 135.9,
+          "rms_energy": 0.0749,
+          "speaking_rate_wpm": 94.9,
+          "is_pause": false,
+          "spectral_centroid_hz": 1461.2
+        },
+        {
+          "time": 2.972,
+          "pitch_hz": 135.2,
+          "rms_energy": 0.0563,
+          "speaking_rate_wpm": 94.9,
+          "is_pause": false,
+          "spectral_centroid_hz": 1723.7
+        },
+        {
+          "time": 2.995,
+          "pitch_hz": 135.2,
+          "rms_energy": 0.1384,
+          "speaking_rate_wpm": 94.9,
+          "is_pause": false,
+          "spectral_centroid_hz": 1129.7
+        },
+        {
+          "time": 3.019,
+          "pitch_hz": 135.2,
+          "rms_energy": 0.189,
+          "speaking_rate_wpm": 81.4,
+          "is_pause": false,
+          "spectral_centroid_hz": 1031.8
+        },
+        {
+          "time": 3.042,
+          "pitch_hz": 135.2,
+          "rms_energy": 0.2276,
+          "speaking_rate_wpm": 81.4,
+          "is_pause": false,
+          "spectral_centroid_hz": 1022.7
+        },
+        {
+          "time": 3.065,
+          "pitch_hz": 135.3,
+          "rms_energy": 0.2545,
+          "speaking_rate_wpm": 81.4,
+          "is_pause": false,
+          "spectral_centroid_hz": 1024.2
+        },
+        {
+          "time": 3.088,
+          "pitch_hz": 135.4,
+          "rms_energy": 0.2532,
+          "speaking_rate_wpm": 81.4,
+          "is_pause": false,
+          "spectral_centroid_hz": 1024.7
+        },
+        {
+          "time": 3.111,
+          "pitch_hz": 135.5,
+          "rms_energy": 0.2518,
+          "speaking_rate_wpm": 81.4,
+          "is_pause": false,
+          "spectral_centroid_hz": 1025.4
+        },
+        {
+          "time": 3.135,
+          "pitch_hz": 135.6,
+          "rms_energy": 0.2517,
+          "speaking_rate_wpm": 81.4,
+          "is_pause": false,
+          "spectral_centroid_hz": 1026.6
+        },
+        {
+          "time": 3.158,
+          "pitch_hz": 135.7,
+          "rms_energy": 0.2579,
+          "speaking_rate_wpm": 81.4,
+          "is_pause": false,
+          "spectral_centroid_hz": 1027.7
+        },
+        {
+          "time": 3.181,
+          "pitch_hz": 135.7,
+          "rms_energy": 0.2402,
+          "speaking_rate_wpm": 81.4,
+          "is_pause": false,
+          "spectral_centroid_hz": 1027.7
+        },
+        {
+          "time": 3.204,
+          "pitch_hz": 135.8,
+          "rms_energy": 0.2064,
+          "speaking_rate_wpm": 94.9,
+          "is_pause": false,
+          "spectral_centroid_hz": 1028.0
+        },
+        {
+          "time": 3.228,
+          "pitch_hz": 135.8,
+          "rms_energy": 0.163,
+          "speaking_rate_wpm": 94.9,
+          "is_pause": false,
+          "spectral_centroid_hz": 1060.0
+        },
+        {
+          "time": 3.251,
+          "pitch_hz": 135.9,
+          "rms_energy": 0.0877,
+          "speaking_rate_wpm": 94.9,
+          "is_pause": false,
+          "spectral_centroid_hz": 1271.9
+        },
+        {
+          "time": 3.274,
+          "pitch_hz": 135.5,
+          "rms_energy": 0.0439,
+          "speaking_rate_wpm": 94.9,
+          "is_pause": false,
+          "spectral_centroid_hz": 2357.4
+        },
+        {
+          "time": 3.297,
+          "pitch_hz": 135.2,
+          "rms_energy": 0.11,
+          "speaking_rate_wpm": 94.9,
+          "is_pause": false,
+          "spectral_centroid_hz": 1211.2
+        },
+        {
+          "time": 3.32,
+          "pitch_hz": 135.1,
+          "rms_energy": 0.1848,
+          "speaking_rate_wpm": 94.9,
+          "is_pause": false,
+          "spectral_centroid_hz": 1047.0
+        },
+        {
+          "time": 3.344,
+          "pitch_hz": 135.2,
+          "rms_energy": 0.2286,
+          "speaking_rate_wpm": 94.9,
+          "is_pause": false,
+          "spectral_centroid_hz": 1021.5
+        },
+        {
+          "time": 3.367,
+          "pitch_hz": 135.2,
+          "rms_energy": 0.2631,
+          "speaking_rate_wpm": 94.9,
+          "is_pause": false,
+          "spectral_centroid_hz": 1021.9
+        },
+        {
+          "time": 3.39,
+          "pitch_hz": 135.2,
+          "rms_energy": 0.2757,
+          "speaking_rate_wpm": 94.9,
+          "is_pause": false,
+          "spectral_centroid_hz": 1022.3
+        },
+        {
+          "time": 3.413,
+          "pitch_hz": 135.3,
+          "rms_energy": 0.2679,
+          "speaking_rate_wpm": 81.4,
+          "is_pause": false,
+          "spectral_centroid_hz": 1022.8
+        },
+        {
+          "time": 3.437,
+          "pitch_hz": 135.4,
+          "rms_energy": 0.2679,
+          "speaking_rate_wpm": 94.9,
+          "is_pause": false,
+          "spectral_centroid_hz": 1023.2
+        },
+        {
+          "time": 3.46,
+          "pitch_hz": 135.4,
+          "rms_energy": 0.268,
+          "speaking_rate_wpm": 94.9,
+          "is_pause": false,
+          "spectral_centroid_hz": 1023.3
+        },
+        {
+          "time": 3.483,
+          "pitch_hz": 135.5,
+          "rms_energy": 0.276,
+          "speaking_rate_wpm": 94.9,
+          "is_pause": false,
+          "spectral_centroid_hz": 1023.9
+        },
+        {
+          "time": 3.506,
+          "pitch_hz": 135.5,
+          "rms_energy": 0.2765,
+          "speaking_rate_wpm": 94.9,
+          "is_pause": false,
+          "spectral_centroid_hz": 1024.9
+        },
+        {
+          "time": 3.529,
+          "pitch_hz": 135.6,
+          "rms_energy": 0.2763,
+          "speaking_rate_wpm": 94.9,
+          "is_pause": false,
+          "spectral_centroid_hz": 1025.9
+        },
+        {
+          "time": 3.553,
+          "pitch_hz": 135.7,
+          "rms_energy": 0.2754,
+          "speaking_rate_wpm": 94.9,
+          "is_pause": false,
+          "spectral_centroid_hz": 1026.4
+        },
+        {
+          "time": 3.576,
+          "pitch_hz": 135.7,
+          "rms_energy": 0.2674,
+          "speaking_rate_wpm": 94.9,
+          "is_pause": false,
+          "spectral_centroid_hz": 1026.8
+        },
+        {
+          "time": 3.599,
+          "pitch_hz": 135.8,
+          "rms_energy": 0.2622,
+          "speaking_rate_wpm": 94.9,
+          "is_pause": false,
+          "spectral_centroid_hz": 1026.8
+        },
+        {
+          "time": 3.622,
+          "pitch_hz": 135.8,
+          "rms_energy": 0.2359,
+          "speaking_rate_wpm": 94.9,
+          "is_pause": false,
+          "spectral_centroid_hz": 1026.8
+        },
+        {
+          "time": 3.646,
+          "pitch_hz": 135.9,
+          "rms_energy": 0.1951,
+          "speaking_rate_wpm": 94.9,
+          "is_pause": false,
+          "spectral_centroid_hz": 1030.9
+        },
+        {
+          "time": 3.669,
+          "pitch_hz": 135.9,
+          "rms_energy": 0.1426,
+          "speaking_rate_wpm": 94.9,
+          "is_pause": false,
+          "spectral_centroid_hz": 1112.5
+        },
+        {
+          "time": 3.692,
+          "pitch_hz": 136.0,
+          "rms_energy": 0.0709,
+          "speaking_rate_wpm": 94.9,
+          "is_pause": false,
+          "spectral_centroid_hz": 1574.4
+        },
+        {
+          "time": 3.715,
+          "pitch_hz": null,
+          "rms_energy": 0.0127,
+          "speaking_rate_wpm": 94.9,
+          "is_pause": true,
+          "spectral_centroid_hz": 5087.1
+        },
+        {
+          "time": 3.738,
+          "pitch_hz": null,
+          "rms_energy": 0.0011,
+          "speaking_rate_wpm": 108.5,
+          "is_pause": true,
+          "spectral_centroid_hz": 5482.4
+        },
+        {
+          "time": 3.762,
+          "pitch_hz": null,
+          "rms_energy": 0.0011,
+          "speaking_rate_wpm": 108.5,
+          "is_pause": true,
+          "spectral_centroid_hz": 5460.9
+        },
+        {
+          "time": 3.785,
+          "pitch_hz": null,
+          "rms_energy": 0.0011,
+          "speaking_rate_wpm": 108.5,
+          "is_pause": true,
+          "spectral_centroid_hz": 5533.3
+        },
+        {
+          "time": 3.808,
+          "pitch_hz": null,
+          "rms_energy": 0.0011,
+          "speaking_rate_wpm": 108.5,
+          "is_pause": true,
+          "spectral_centroid_hz": 5502.5
+        },
+        {
+          "time": 3.831,
+          "pitch_hz": null,
+          "rms_energy": 0.0011,
+          "speaking_rate_wpm": 108.5,
+          "is_pause": true,
+          "spectral_centroid_hz": 5431.6
+        },
+        {
+          "time": 3.855,
+          "pitch_hz": null,
+          "rms_energy": 0.0011,
+          "speaking_rate_wpm": 108.5,
+          "is_pause": true,
+          "spectral_centroid_hz": 5397.0
+        },
+        {
+          "time": 3.878,
+          "pitch_hz": null,
+          "rms_energy": 0.0011,
+          "speaking_rate_wpm": 108.5,
+          "is_pause": true,
+          "spectral_centroid_hz": 5434.6
+        },
+        {
+          "time": 3.901,
+          "pitch_hz": null,
+          "rms_energy": 0.0011,
+          "speaking_rate_wpm": 108.5,
+          "is_pause": true,
+          "spectral_centroid_hz": 5421.7
+        },
+        {
+          "time": 3.924,
+          "pitch_hz": null,
+          "rms_energy": 0.0011,
+          "speaking_rate_wpm": 108.5,
+          "is_pause": true,
+          "spectral_centroid_hz": 5459.6
+        },
+        {
+          "time": 3.947,
+          "pitch_hz": null,
+          "rms_energy": 0.0011,
+          "speaking_rate_wpm": 108.5,
+          "is_pause": true,
+          "spectral_centroid_hz": 5568.0
+        },
+        {
+          "time": 3.971,
+          "pitch_hz": null,
+          "rms_energy": 0.0011,
+          "speaking_rate_wpm": 108.5,
+          "is_pause": true,
+          "spectral_centroid_hz": 5620.5
+        },
+        {
+          "time": 3.994,
+          "pitch_hz": null,
+          "rms_energy": 0.0011,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": true,
+          "spectral_centroid_hz": 5533.7
+        },
+        {
+          "time": 4.017,
+          "pitch_hz": null,
+          "rms_energy": 0.0011,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": true,
+          "spectral_centroid_hz": 5470.4
+        },
+        {
+          "time": 4.04,
+          "pitch_hz": null,
+          "rms_energy": 0.0011,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": true,
+          "spectral_centroid_hz": 5562.2
+        },
+        {
+          "time": 4.063,
+          "pitch_hz": null,
+          "rms_energy": 0.0011,
+          "speaking_rate_wpm": 108.5,
+          "is_pause": true,
+          "spectral_centroid_hz": 5662.4
+        },
+        {
+          "time": 4.087,
+          "pitch_hz": null,
+          "rms_energy": 0.0011,
+          "speaking_rate_wpm": 108.5,
+          "is_pause": true,
+          "spectral_centroid_hz": 5437.8
+        },
+        {
+          "time": 4.11,
+          "pitch_hz": null,
+          "rms_energy": 0.0011,
+          "speaking_rate_wpm": 108.5,
+          "is_pause": true,
+          "spectral_centroid_hz": 5472.2
+        },
+        {
+          "time": 4.133,
+          "pitch_hz": null,
+          "rms_energy": 0.0011,
+          "speaking_rate_wpm": 108.5,
+          "is_pause": true,
+          "spectral_centroid_hz": 5525.0
+        },
+        {
+          "time": 4.156,
+          "pitch_hz": null,
+          "rms_energy": 0.0011,
+          "speaking_rate_wpm": 108.5,
+          "is_pause": true,
+          "spectral_centroid_hz": 5546.5
+        },
+        {
+          "time": 4.18,
+          "pitch_hz": null,
+          "rms_energy": 0.0011,
+          "speaking_rate_wpm": 108.5,
+          "is_pause": true,
+          "spectral_centroid_hz": 5521.5
+        },
+        {
+          "time": 4.203,
+          "pitch_hz": null,
+          "rms_energy": 0.0011,
+          "speaking_rate_wpm": 108.5,
+          "is_pause": true,
+          "spectral_centroid_hz": 5488.1
+        },
+        {
+          "time": 4.226,
+          "pitch_hz": null,
+          "rms_energy": 0.0011,
+          "speaking_rate_wpm": 108.5,
+          "is_pause": true,
+          "spectral_centroid_hz": 5578.7
+        },
+        {
+          "time": 4.249,
+          "pitch_hz": null,
+          "rms_energy": 0.0011,
+          "speaking_rate_wpm": 108.5,
+          "is_pause": true,
+          "spectral_centroid_hz": 5574.3
+        },
+        {
+          "time": 4.272,
+          "pitch_hz": null,
+          "rms_energy": 0.0011,
+          "speaking_rate_wpm": 108.5,
+          "is_pause": true,
+          "spectral_centroid_hz": 5518.7
+        },
+        {
+          "time": 4.296,
+          "pitch_hz": null,
+          "rms_energy": 0.0111,
+          "speaking_rate_wpm": 94.9,
+          "is_pause": true,
+          "spectral_centroid_hz": 5137.8
+        },
+        {
+          "time": 4.319,
+          "pitch_hz": 135.2,
+          "rms_energy": 0.0613,
+          "speaking_rate_wpm": 108.5,
+          "is_pause": false,
+          "spectral_centroid_hz": 1511.1
+        },
+        {
+          "time": 4.342,
+          "pitch_hz": 135.2,
+          "rms_energy": 0.1191,
+          "speaking_rate_wpm": 108.5,
+          "is_pause": false,
+          "spectral_centroid_hz": 1103.0
+        },
+        {
+          "time": 4.365,
+          "pitch_hz": 135.3,
+          "rms_energy": 0.1641,
+          "speaking_rate_wpm": 108.5,
+          "is_pause": false,
+          "spectral_centroid_hz": 1026.5
+        },
+        {
+          "time": 4.389,
+          "pitch_hz": 135.3,
+          "rms_energy": 0.1934,
+          "speaking_rate_wpm": 108.5,
+          "is_pause": false,
+          "spectral_centroid_hz": 1024.8
+        },
+        {
+          "time": 4.412,
+          "pitch_hz": 135.4,
+          "rms_energy": 0.2103,
+          "speaking_rate_wpm": 108.5,
+          "is_pause": false,
+          "spectral_centroid_hz": 1026.6
+        },
+        {
+          "time": 4.435,
+          "pitch_hz": 135.5,
+          "rms_energy": 0.2102,
+          "speaking_rate_wpm": 108.5,
+          "is_pause": false,
+          "spectral_centroid_hz": 1027.8
+        },
+        {
+          "time": 4.458,
+          "pitch_hz": 135.6,
+          "rms_energy": 0.1935,
+          "speaking_rate_wpm": 108.5,
+          "is_pause": false,
+          "spectral_centroid_hz": 1028.7
+        },
+        {
+          "time": 4.481,
+          "pitch_hz": 135.7,
+          "rms_energy": 0.1672,
+          "speaking_rate_wpm": 108.5,
+          "is_pause": false,
+          "spectral_centroid_hz": 1028.3
+        },
+        {
+          "time": 4.505,
+          "pitch_hz": 135.8,
+          "rms_energy": 0.1323,
+          "speaking_rate_wpm": 108.5,
+          "is_pause": false,
+          "spectral_centroid_hz": 1053.4
+        },
+        {
+          "time": 4.528,
+          "pitch_hz": 135.8,
+          "rms_energy": 0.0845,
+          "speaking_rate_wpm": 108.5,
+          "is_pause": false,
+          "spectral_centroid_hz": 1248.2
+        },
+        {
+          "time": 4.551,
+          "pitch_hz": 135.7,
+          "rms_energy": 0.0416,
+          "speaking_rate_wpm": 108.5,
+          "is_pause": false,
+          "spectral_centroid_hz": 2395.2
+        },
+        {
+          "time": 4.574,
+          "pitch_hz": 135.2,
+          "rms_energy": 0.0808,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": false,
+          "spectral_centroid_hz": 1334.9
+        },
+        {
+          "time": 4.598,
+          "pitch_hz": 135.2,
+          "rms_energy": 0.1301,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": false,
+          "spectral_centroid_hz": 1071.5
+        },
+        {
+          "time": 4.621,
+          "pitch_hz": 135.3,
+          "rms_energy": 0.166,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": false,
+          "spectral_centroid_hz": 1024.2
+        },
+        {
+          "time": 4.644,
+          "pitch_hz": 135.4,
+          "rms_energy": 0.1967,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": false,
+          "spectral_centroid_hz": 1026.6
+        },
+        {
+          "time": 4.667,
+          "pitch_hz": 135.5,
+          "rms_energy": 0.2113,
+          "speaking_rate_wpm": 108.5,
+          "is_pause": false,
+          "spectral_centroid_hz": 1028.4
+        },
+        {
+          "time": 4.69,
+          "pitch_hz": 135.6,
+          "rms_energy": 0.2001,
+          "speaking_rate_wpm": 108.5,
+          "is_pause": false,
+          "spectral_centroid_hz": 1029.3
+        },
+        {
+          "time": 4.714,
+          "pitch_hz": 135.7,
+          "rms_energy": 0.1736,
+          "speaking_rate_wpm": 108.5,
+          "is_pause": false,
+          "spectral_centroid_hz": 1028.1
+        },
+        {
+          "time": 4.737,
+          "pitch_hz": 135.7,
+          "rms_energy": 0.1358,
+          "speaking_rate_wpm": 108.5,
+          "is_pause": false,
+          "spectral_centroid_hz": 1060.1
+        },
+        {
+          "time": 4.76,
+          "pitch_hz": 135.8,
+          "rms_energy": 0.0808,
+          "speaking_rate_wpm": 108.5,
+          "is_pause": false,
+          "spectral_centroid_hz": 1290.9
+        },
+        {
+          "time": 4.783,
+          "pitch_hz": 135.5,
+          "rms_energy": 0.042,
+          "speaking_rate_wpm": 108.5,
+          "is_pause": false,
+          "spectral_centroid_hz": 2427.0
+        },
+        {
+          "time": 4.807,
+          "pitch_hz": 135.1,
+          "rms_energy": 0.1079,
+          "speaking_rate_wpm": 108.5,
+          "is_pause": false,
+          "spectral_centroid_hz": 1221.3
+        },
+        {
+          "time": 4.83,
+          "pitch_hz": 135.2,
+          "rms_energy": 0.1785,
+          "speaking_rate_wpm": 108.5,
+          "is_pause": false,
+          "spectral_centroid_hz": 1050.3
+        },
+        {
+          "time": 4.853,
+          "pitch_hz": 135.2,
+          "rms_energy": 0.2283,
+          "speaking_rate_wpm": 108.5,
+          "is_pause": false,
+          "spectral_centroid_hz": 1022.3
+        },
+        {
+          "time": 4.876,
+          "pitch_hz": 135.3,
+          "rms_energy": 0.2631,
+          "speaking_rate_wpm": 108.5,
+          "is_pause": false,
+          "spectral_centroid_hz": 1024.0
+        },
+        {
+          "time": 4.899,
+          "pitch_hz": 135.4,
+          "rms_energy": 0.2764,
+          "speaking_rate_wpm": 108.5,
+          "is_pause": false,
+          "spectral_centroid_hz": 1024.7
+        },
+        {
+          "time": 4.923,
+          "pitch_hz": 135.4,
+          "rms_energy": 0.2719,
+          "speaking_rate_wpm": 108.5,
+          "is_pause": false,
+          "spectral_centroid_hz": 1025.2
+        },
+        {
+          "time": 4.946,
+          "pitch_hz": 135.5,
+          "rms_energy": 0.2673,
+          "speaking_rate_wpm": 108.5,
+          "is_pause": false,
+          "spectral_centroid_hz": 1026.6
+        },
+        {
+          "time": 4.969,
+          "pitch_hz": 135.6,
+          "rms_energy": 0.2671,
+          "speaking_rate_wpm": 108.5,
+          "is_pause": false,
+          "spectral_centroid_hz": 1027.8
+        },
+        {
+          "time": 4.992,
+          "pitch_hz": 135.7,
+          "rms_energy": 0.2515,
+          "speaking_rate_wpm": 108.5,
+          "is_pause": false,
+          "spectral_centroid_hz": 1027.9
+        },
+        {
+          "time": 5.016,
+          "pitch_hz": 135.8,
+          "rms_energy": 0.2152,
+          "speaking_rate_wpm": 94.9,
+          "is_pause": false,
+          "spectral_centroid_hz": 1028.2
+        },
+        {
+          "time": 5.039,
+          "pitch_hz": 135.8,
+          "rms_energy": 0.169,
+          "speaking_rate_wpm": 94.9,
+          "is_pause": false,
+          "spectral_centroid_hz": 1057.3
+        },
+        {
+          "time": 5.062,
+          "pitch_hz": 135.9,
+          "rms_energy": 0.1025,
+          "speaking_rate_wpm": 94.9,
+          "is_pause": false,
+          "spectral_centroid_hz": 1257.5
+        },
+        {
+          "time": 5.085,
+          "pitch_hz": 136.1,
+          "rms_energy": 0.0432,
+          "speaking_rate_wpm": 94.9,
+          "is_pause": false,
+          "spectral_centroid_hz": 2395.6
+        },
+        {
+          "time": 5.108,
+          "pitch_hz": 135.2,
+          "rms_energy": 0.1057,
+          "speaking_rate_wpm": 94.9,
+          "is_pause": false,
+          "spectral_centroid_hz": 1250.4
+        },
+        {
+          "time": 5.132,
+          "pitch_hz": 135.2,
+          "rms_energy": 0.1533,
+          "speaking_rate_wpm": 94.9,
+          "is_pause": false,
+          "spectral_centroid_hz": 1054.5
+        },
+        {
+          "time": 5.155,
+          "pitch_hz": 135.3,
+          "rms_energy": 0.1888,
+          "speaking_rate_wpm": 94.9,
+          "is_pause": false,
+          "spectral_centroid_hz": 1023.2
+        },
+        {
+          "time": 5.178,
+          "pitch_hz": 135.4,
+          "rms_energy": 0.2159,
+          "speaking_rate_wpm": 108.5,
+          "is_pause": false,
+          "spectral_centroid_hz": 1026.0
+        },
+        {
+          "time": 5.201,
+          "pitch_hz": 135.5,
+          "rms_energy": 0.2203,
+          "speaking_rate_wpm": 108.5,
+          "is_pause": false,
+          "spectral_centroid_hz": 1027.0
+        },
+        {
+          "time": 5.224,
+          "pitch_hz": 135.6,
+          "rms_energy": 0.2182,
+          "speaking_rate_wpm": 108.5,
+          "is_pause": false,
+          "spectral_centroid_hz": 1028.5
+        },
+        {
+          "time": 5.248,
+          "pitch_hz": 135.7,
+          "rms_energy": 0.2001,
+          "speaking_rate_wpm": 108.5,
+          "is_pause": false,
+          "spectral_centroid_hz": 1028.0
+        },
+        {
+          "time": 5.271,
+          "pitch_hz": 135.7,
+          "rms_energy": 0.1682,
+          "speaking_rate_wpm": 108.5,
+          "is_pause": false,
+          "spectral_centroid_hz": 1028.2
+        },
+        {
+          "time": 5.294,
+          "pitch_hz": 135.8,
+          "rms_energy": 0.1275,
+          "speaking_rate_wpm": 108.5,
+          "is_pause": false,
+          "spectral_centroid_hz": 1093.0
+        },
+        {
+          "time": 5.317,
+          "pitch_hz": 135.9,
+          "rms_energy": 0.0697,
+          "speaking_rate_wpm": 108.5,
+          "is_pause": false,
+          "spectral_centroid_hz": 1446.2
+        },
+        {
+          "time": 5.341,
+          "pitch_hz": 135.2,
+          "rms_energy": 0.0472,
+          "speaking_rate_wpm": 108.5,
+          "is_pause": false,
+          "spectral_centroid_hz": 1893.6
+        },
+        {
+          "time": 5.364,
+          "pitch_hz": 135.2,
+          "rms_energy": 0.1091,
+          "speaking_rate_wpm": 108.5,
+          "is_pause": false,
+          "spectral_centroid_hz": 1157.4
+        },
+        {
+          "time": 5.387,
+          "pitch_hz": 135.3,
+          "rms_energy": 0.16,
+          "speaking_rate_wpm": 108.5,
+          "is_pause": false,
+          "spectral_centroid_hz": 1037.1
+        },
+        {
+          "time": 5.41,
+          "pitch_hz": 135.3,
+          "rms_energy": 0.1983,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": false,
+          "spectral_centroid_hz": 1024.3
+        },
+        {
+          "time": 5.433,
+          "pitch_hz": 135.4,
+          "rms_energy": 0.2229,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": false,
+          "spectral_centroid_hz": 1027.4
+        },
+        {
+          "time": 5.457,
+          "pitch_hz": 135.5,
+          "rms_energy": 0.2256,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": false,
+          "spectral_centroid_hz": 1028.9
+        },
+        {
+          "time": 5.48,
+          "pitch_hz": 135.6,
+          "rms_energy": 0.2028,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": false,
+          "spectral_centroid_hz": 1028.6
+        },
+        {
+          "time": 5.503,
+          "pitch_hz": 135.7,
+          "rms_energy": 0.1661,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": false,
+          "spectral_centroid_hz": 1030.2
+        },
+        {
+          "time": 5.526,
+          "pitch_hz": 135.8,
+          "rms_energy": 0.1237,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": false,
+          "spectral_centroid_hz": 1105.8
+        },
+        {
+          "time": 5.55,
+          "pitch_hz": 135.9,
+          "rms_energy": 0.0645,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": false,
+          "spectral_centroid_hz": 1523.3
+        },
+        {
+          "time": 5.573,
+          "pitch_hz": 135.2,
+          "rms_energy": 0.0737,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": false,
+          "spectral_centroid_hz": 1634.7
+        },
+        {
+          "time": 5.596,
+          "pitch_hz": 135.1,
+          "rms_energy": 0.1625,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": false,
+          "spectral_centroid_hz": 1118.8
+        },
+        {
+          "time": 5.619,
+          "pitch_hz": 135.2,
+          "rms_energy": 0.2184,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": false,
+          "spectral_centroid_hz": 1029.5
+        },
+        {
+          "time": 5.642,
+          "pitch_hz": 135.2,
+          "rms_energy": 0.2618,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": false,
+          "spectral_centroid_hz": 1022.0
+        },
+        {
+          "time": 5.666,
+          "pitch_hz": 135.3,
+          "rms_energy": 0.2901,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": false,
+          "spectral_centroid_hz": 1023.2
+        },
+        {
+          "time": 5.689,
+          "pitch_hz": 135.3,
+          "rms_energy": 0.2895,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": false,
+          "spectral_centroid_hz": 1023.8
+        },
+        {
+          "time": 5.712,
+          "pitch_hz": 135.4,
+          "rms_energy": 0.2894,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": false,
+          "spectral_centroid_hz": 1024.1
+        },
+        {
+          "time": 5.735,
+          "pitch_hz": 135.5,
+          "rms_energy": 0.2945,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": false,
+          "spectral_centroid_hz": 1024.8
+        },
+        {
+          "time": 5.759,
+          "pitch_hz": 135.6,
+          "rms_energy": 0.299,
+          "speaking_rate_wpm": 135.6,
+          "is_pause": false,
+          "spectral_centroid_hz": 1025.9
+        },
+        {
+          "time": 5.782,
+          "pitch_hz": 135.6,
+          "rms_energy": 0.2996,
+          "speaking_rate_wpm": 135.6,
+          "is_pause": false,
+          "spectral_centroid_hz": 1027.0
+        },
+        {
+          "time": 5.805,
+          "pitch_hz": 135.7,
+          "rms_energy": 0.2947,
+          "speaking_rate_wpm": 135.6,
+          "is_pause": false,
+          "spectral_centroid_hz": 1027.3
+        },
+        {
+          "time": 5.828,
+          "pitch_hz": 135.8,
+          "rms_energy": 0.2633,
+          "speaking_rate_wpm": 135.6,
+          "is_pause": false,
+          "spectral_centroid_hz": 1027.1
+        },
+        {
+          "time": 5.851,
+          "pitch_hz": 135.8,
+          "rms_energy": 0.2152,
+          "speaking_rate_wpm": 135.6,
+          "is_pause": false,
+          "spectral_centroid_hz": 1028.4
+        },
+        {
+          "time": 5.875,
+          "pitch_hz": 135.9,
+          "rms_energy": 0.1585,
+          "speaking_rate_wpm": 135.6,
+          "is_pause": false,
+          "spectral_centroid_hz": 1082.2
+        },
+        {
+          "time": 5.898,
+          "pitch_hz": 135.9,
+          "rms_energy": 0.0823,
+          "speaking_rate_wpm": 135.6,
+          "is_pause": false,
+          "spectral_centroid_hz": 1383.2
+        },
+        {
+          "time": 5.921,
+          "pitch_hz": 135.3,
+          "rms_energy": 0.0502,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": false,
+          "spectral_centroid_hz": 1918.3
+        },
+        {
+          "time": 5.944,
+          "pitch_hz": 135.2,
+          "rms_energy": 0.1098,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": false,
+          "spectral_centroid_hz": 1170.0
+        },
+        {
+          "time": 5.968,
+          "pitch_hz": 135.3,
+          "rms_energy": 0.1644,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": false,
+          "spectral_centroid_hz": 1037.0
+        },
+        {
+          "time": 5.991,
+          "pitch_hz": 135.3,
+          "rms_energy": 0.1985,
+          "speaking_rate_wpm": 135.6,
+          "is_pause": false,
+          "spectral_centroid_hz": 1023.4
+        },
+        {
+          "time": 6.014,
+          "pitch_hz": 135.3,
+          "rms_energy": 0.2228,
+          "speaking_rate_wpm": 135.6,
+          "is_pause": false,
+          "spectral_centroid_hz": 1025.5
+        },
+        {
+          "time": 6.037,
+          "pitch_hz": 135.4,
+          "rms_energy": 0.2273,
+          "speaking_rate_wpm": 135.6,
+          "is_pause": false,
+          "spectral_centroid_hz": 1026.1
+        },
+        {
+          "time": 6.06,
+          "pitch_hz": 135.6,
+          "rms_energy": 0.2207,
+          "speaking_rate_wpm": 135.6,
+          "is_pause": false,
+          "spectral_centroid_hz": 1027.5
+        },
+        {
+          "time": 6.084,
+          "pitch_hz": 135.6,
+          "rms_energy": 0.2129,
+          "speaking_rate_wpm": 135.6,
+          "is_pause": false,
+          "spectral_centroid_hz": 1029.0
+        },
+        {
+          "time": 6.107,
+          "pitch_hz": 135.7,
+          "rms_energy": 0.1876,
+          "speaking_rate_wpm": 135.6,
+          "is_pause": false,
+          "spectral_centroid_hz": 1029.6
+        },
+        {
+          "time": 6.13,
+          "pitch_hz": 135.8,
+          "rms_energy": 0.1523,
+          "speaking_rate_wpm": 135.6,
+          "is_pause": false,
+          "spectral_centroid_hz": 1041.0
+        },
+        {
+          "time": 6.153,
+          "pitch_hz": 135.8,
+          "rms_energy": 0.1057,
+          "speaking_rate_wpm": 135.6,
+          "is_pause": false,
+          "spectral_centroid_hz": 1182.1
+        },
+        {
+          "time": 6.177,
+          "pitch_hz": 135.9,
+          "rms_energy": 0.0468,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": false,
+          "spectral_centroid_hz": 1975.4
+        },
+        {
+          "time": 6.2,
+          "pitch_hz": null,
+          "rms_energy": 0.0064,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": true,
+          "spectral_centroid_hz": 5512.7
+        },
+        {
+          "time": 6.223,
+          "pitch_hz": null,
+          "rms_energy": 0.0011,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": true,
+          "spectral_centroid_hz": 5505.1
+        },
+        {
+          "time": 6.246,
+          "pitch_hz": null,
+          "rms_energy": 0.0011,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": true,
+          "spectral_centroid_hz": 5470.4
+        },
+        {
+          "time": 6.269,
+          "pitch_hz": null,
+          "rms_energy": 0.0011,
+          "speaking_rate_wpm": 135.6,
+          "is_pause": true,
+          "spectral_centroid_hz": 5418.9
+        },
+        {
+          "time": 6.293,
+          "pitch_hz": null,
+          "rms_energy": 0.0011,
+          "speaking_rate_wpm": 135.6,
+          "is_pause": true,
+          "spectral_centroid_hz": 5466.4
+        },
+        {
+          "time": 6.316,
+          "pitch_hz": null,
+          "rms_energy": 0.0011,
+          "speaking_rate_wpm": 135.6,
+          "is_pause": true,
+          "spectral_centroid_hz": 5443.9
+        },
+        {
+          "time": 6.339,
+          "pitch_hz": null,
+          "rms_energy": 0.0011,
+          "speaking_rate_wpm": 135.6,
+          "is_pause": true,
+          "spectral_centroid_hz": 5588.4
+        },
+        {
+          "time": 6.362,
+          "pitch_hz": null,
+          "rms_energy": 0.0011,
+          "speaking_rate_wpm": 135.6,
+          "is_pause": true,
+          "spectral_centroid_hz": 5557.3
+        },
+        {
+          "time": 6.385,
+          "pitch_hz": null,
+          "rms_energy": 0.0011,
+          "speaking_rate_wpm": 135.6,
+          "is_pause": true,
+          "spectral_centroid_hz": 5446.7
+        },
+        {
+          "time": 6.409,
+          "pitch_hz": null,
+          "rms_energy": 0.0011,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": true,
+          "spectral_centroid_hz": 5552.0
+        },
+        {
+          "time": 6.432,
+          "pitch_hz": null,
+          "rms_energy": 0.0011,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": true,
+          "spectral_centroid_hz": 5512.1
+        },
+        {
+          "time": 6.455,
+          "pitch_hz": null,
+          "rms_energy": 0.0011,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": true,
+          "spectral_centroid_hz": 5579.5
+        },
+        {
+          "time": 6.478,
+          "pitch_hz": null,
+          "rms_energy": 0.0011,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": true,
+          "spectral_centroid_hz": 5669.9
+        },
+        {
+          "time": 6.502,
+          "pitch_hz": null,
+          "rms_energy": 0.0011,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": true,
+          "spectral_centroid_hz": 5577.4
+        },
+        {
+          "time": 6.525,
+          "pitch_hz": null,
+          "rms_energy": 0.0102,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": true,
+          "spectral_centroid_hz": 5294.2
+        },
+        {
+          "time": 6.548,
+          "pitch_hz": 135.2,
+          "rms_energy": 0.0554,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": false,
+          "spectral_centroid_hz": 1563.9
+        },
+        {
+          "time": 6.571,
+          "pitch_hz": 135.3,
+          "rms_energy": 0.1082,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": false,
+          "spectral_centroid_hz": 1113.4
+        },
+        {
+          "time": 6.594,
+          "pitch_hz": 135.3,
+          "rms_energy": 0.1476,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": false,
+          "spectral_centroid_hz": 1028.7
+        },
+        {
+          "time": 6.618,
+          "pitch_hz": 135.4,
+          "rms_energy": 0.1781,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": false,
+          "spectral_centroid_hz": 1026.9
+        },
+        {
+          "time": 6.641,
+          "pitch_hz": 135.5,
+          "rms_energy": 0.1925,
+          "speaking_rate_wpm": 135.6,
+          "is_pause": false,
+          "spectral_centroid_hz": 1029.8
+        },
+        {
+          "time": 6.664,
+          "pitch_hz": 135.6,
+          "rms_energy": 0.1754,
+          "speaking_rate_wpm": 135.6,
+          "is_pause": false,
+          "spectral_centroid_hz": 1029.1
+        },
+        {
+          "time": 6.687,
+          "pitch_hz": 135.7,
+          "rms_energy": 0.144,
+          "speaking_rate_wpm": 135.6,
+          "is_pause": false,
+          "spectral_centroid_hz": 1036.1
+        },
+        {
+          "time": 6.711,
+          "pitch_hz": 135.8,
+          "rms_energy": 0.1034,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": false,
+          "spectral_centroid_hz": 1142.7
+        },
+        {
+          "time": 6.734,
+          "pitch_hz": 135.9,
+          "rms_energy": 0.0511,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": false,
+          "spectral_centroid_hz": 1734.7
+        },
+        {
+          "time": 6.757,
+          "pitch_hz": 135.1,
+          "rms_energy": 0.0785,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": false,
+          "spectral_centroid_hz": 1467.3
+        },
+        {
+          "time": 6.78,
+          "pitch_hz": 135.1,
+          "rms_energy": 0.152,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": false,
+          "spectral_centroid_hz": 1093.7
+        },
+        {
+          "time": 6.803,
+          "pitch_hz": 135.2,
+          "rms_energy": 0.2032,
+          "speaking_rate_wpm": 122.1,
+          "is_pause": false,
+          "spectral_centroid_hz": 1025.5
+        },
+        {
+          "time": 6.827,
+          "pitch_hz": 135.2,
+          "rms_energy": 0.2476,
+          "speaking_rate_wpm": 123.0,
+          "is_pause": false,
+          "spectral_centroid_hz": 1021.8
+        },
+        {
+          "time": 6.85,
+          "pitch_hz": 135.3,
+          "rms_energy": 0.275,
+          "speaking_rate_wpm": 124.0,
+          "is_pause": false,
+          "spectral_centroid_hz": 1022.9
+        },
+        {
+          "time": 6.873,
+          "pitch_hz": 135.3,
+          "rms_energy": 0.2771,
+          "speaking_rate_wpm": 125.0,
+          "is_pause": false,
+          "spectral_centroid_hz": 1023.5
+        },
+        {
+          "time": 6.896,
+          "pitch_hz": 135.4,
+          "rms_energy": 0.2764,
+          "speaking_rate_wpm": 126.0,
+          "is_pause": false,
+          "spectral_centroid_hz": 1023.7
+        },
+        {
+          "time": 6.92,
+          "pitch_hz": 135.5,
+          "rms_energy": 0.2718,
+          "speaking_rate_wpm": 127.1,
+          "is_pause": false,
+          "spectral_centroid_hz": 1024.2
+        },
+        {
+          "time": 6.943,
+          "pitch_hz": 135.5,
+          "rms_energy": 0.2674,
+          "speaking_rate_wpm": 128.1,
+          "is_pause": false,
+          "spectral_centroid_hz": 1025.4
+        },
+        {
+          "time": 6.966,
+          "pitch_hz": 135.6,
+          "rms_energy": 0.2674,
+          "speaking_rate_wpm": 114.8,
+          "is_pause": false,
+          "spectral_centroid_hz": 1026.5
+        },
+        {
+          "time": 6.989,
+          "pitch_hz": 135.7,
+          "rms_energy": 0.2747,
+          "speaking_rate_wpm": 115.8,
+          "is_pause": false,
+          "spectral_centroid_hz": 1027.0
+        },
+        {
+          "time": 7.012,
+          "pitch_hz": 135.8,
+          "rms_energy": 0.2648,
+          "speaking_rate_wpm": 116.8,
+          "is_pause": false,
+          "spectral_centroid_hz": 1027.2
+        },
+        {
+          "time": 7.036,
+          "pitch_hz": 135.8,
+          "rms_energy": 0.2342,
+          "speaking_rate_wpm": 117.8,
+          "is_pause": false,
+          "spectral_centroid_hz": 1027.4
+        },
+        {
+          "time": 7.059,
+          "pitch_hz": 135.8,
+          "rms_energy": 0.1915,
+          "speaking_rate_wpm": 118.8,
+          "is_pause": false,
+          "spectral_centroid_hz": 1036.1
+        },
+        {
+          "time": 7.082,
+          "pitch_hz": 135.9,
+          "rms_energy": 0.1224,
+          "speaking_rate_wpm": 119.8,
+          "is_pause": false,
+          "spectral_centroid_hz": 1145.4
+        },
+        {
+          "time": 7.105,
+          "pitch_hz": 136.0,
+          "rms_energy": 0.0516,
+          "speaking_rate_wpm": 120.9,
+          "is_pause": false,
+          "spectral_centroid_hz": 1785.7
+        },
+        {
+          "time": 7.129,
+          "pitch_hz": 135.2,
+          "rms_energy": 0.0566,
+          "speaking_rate_wpm": 122.0,
+          "is_pause": false,
+          "spectral_centroid_hz": 1548.6
+        },
+        {
+          "time": 7.152,
+          "pitch_hz": 135.3,
+          "rms_energy": 0.1091,
+          "speaking_rate_wpm": 123.0,
+          "is_pause": false,
+          "spectral_centroid_hz": 1107.6
+        },
+        {
+          "time": 7.175,
+          "pitch_hz": 135.3,
+          "rms_energy": 0.1514,
+          "speaking_rate_wpm": 124.2,
+          "is_pause": false,
+          "spectral_centroid_hz": 1027.8
+        },
+        {
+          "time": 7.198,
+          "pitch_hz": 135.4,
+          "rms_energy": 0.1783,
+          "speaking_rate_wpm": 125.3,
+          "is_pause": false,
+          "spectral_centroid_hz": 1027.0
+        },
+        {
+          "time": 7.221,
+          "pitch_hz": 135.5,
+          "rms_energy": 0.1922,
+          "speaking_rate_wpm": 126.4,
+          "is_pause": false,
+          "spectral_centroid_hz": 1029.8
+        },
+        {
+          "time": 7.245,
+          "pitch_hz": 135.6,
+          "rms_energy": 0.1748,
+          "speaking_rate_wpm": 127.6,
+          "is_pause": false,
+          "spectral_centroid_hz": 1029.1
+        },
+        {
+          "time": 7.268,
+          "pitch_hz": 135.7,
+          "rms_energy": 0.14,
+          "speaking_rate_wpm": 128.8,
+          "is_pause": false,
+          "spectral_centroid_hz": 1036.1
+        },
+        {
+          "time": 7.291,
+          "pitch_hz": 135.8,
+          "rms_energy": 0.103,
+          "speaking_rate_wpm": 113.8,
+          "is_pause": false,
+          "spectral_centroid_hz": 1143.9
+        },
+        {
+          "time": 7.314,
+          "pitch_hz": 135.9,
+          "rms_energy": 0.0509,
+          "speaking_rate_wpm": 114.8,
+          "is_pause": false,
+          "spectral_centroid_hz": 1768.7
+        },
+        {
+          "time": 7.338,
+          "pitch_hz": 135.1,
+          "rms_energy": 0.0739,
+          "speaking_rate_wpm": 115.9,
+          "is_pause": false,
+          "spectral_centroid_hz": 1479.5
+        },
+        {
+          "time": 7.361,
+          "pitch_hz": 135.2,
+          "rms_energy": 0.144,
+          "speaking_rate_wpm": 117.1,
+          "is_pause": false,
+          "spectral_centroid_hz": 1098.0
+        },
+        {
+          "time": 7.384,
+          "pitch_hz": 135.2,
+          "rms_energy": 0.1922,
+          "speaking_rate_wpm": 118.2,
+          "is_pause": false,
+          "spectral_centroid_hz": 1026.2
+        },
+        {
+          "time": 7.407,
+          "pitch_hz": 135.3,
+          "rms_energy": 0.2373,
+          "speaking_rate_wpm": 119.4,
+          "is_pause": false,
+          "spectral_centroid_hz": 1023.2
+        },
+        {
+          "time": 7.43,
+          "pitch_hz": 135.3,
+          "rms_energy": 0.259,
+          "speaking_rate_wpm": 120.6,
+          "is_pause": false,
+          "spectral_centroid_hz": 1024.9
+        },
+        {
+          "time": 7.454,
+          "pitch_hz": 135.4,
+          "rms_energy": 0.2602,
+          "speaking_rate_wpm": 121.8,
+          "is_pause": false,
+          "spectral_centroid_hz": 1025.4
+        },
+        {
+          "time": 7.477,
+          "pitch_hz": 135.5,
+          "rms_energy": 0.2592,
+          "speaking_rate_wpm": 123.0,
+          "is_pause": false,
+          "spectral_centroid_hz": 1026.5
+        },
+        {
+          "time": 7.5,
+          "pitch_hz": 135.6,
+          "rms_energy": 0.2509,
+          "speaking_rate_wpm": 124.3,
+          "is_pause": false,
+          "spectral_centroid_hz": 1027.9
+        },
+        {
+          "time": 7.523,
+          "pitch_hz": 135.7,
+          "rms_energy": 0.2327,
+          "speaking_rate_wpm": 125.6,
+          "is_pause": false,
+          "spectral_centroid_hz": 1027.6
+        },
+        {
+          "time": 7.546,
+          "pitch_hz": 135.8,
+          "rms_energy": 0.1979,
+          "speaking_rate_wpm": 108.8,
+          "is_pause": false,
+          "spectral_centroid_hz": 1027.4
+        },
+        {
+          "time": 7.57,
+          "pitch_hz": 135.8,
+          "rms_energy": 0.1532,
+          "speaking_rate_wpm": 110.0,
+          "is_pause": false,
+          "spectral_centroid_hz": 1065.8
+        },
+        {
+          "time": 7.593,
+          "pitch_hz": 135.9,
+          "rms_energy": 0.0904,
+          "speaking_rate_wpm": 111.1,
+          "is_pause": false,
+          "spectral_centroid_hz": 1313.6
+        },
+        {
+          "time": 7.616,
+          "pitch_hz": 135.4,
+          "rms_energy": 0.0524,
+          "speaking_rate_wpm": 112.3,
+          "is_pause": false,
+          "spectral_centroid_hz": 2349.1
+        },
+        {
+          "time": 7.639,
+          "pitch_hz": 135.2,
+          "rms_energy": 0.1072,
+          "speaking_rate_wpm": 113.6,
+          "is_pause": false,
+          "spectral_centroid_hz": 1220.7
+        },
+        {
+          "time": 7.663,
+          "pitch_hz": 135.2,
+          "rms_energy": 0.1537,
+          "speaking_rate_wpm": 114.8,
+          "is_pause": false,
+          "spectral_centroid_hz": 1046.6
+        },
+        {
+          "time": 7.686,
+          "pitch_hz": 135.3,
+          "rms_energy": 0.1888,
+          "speaking_rate_wpm": 116.1,
+          "is_pause": false,
+          "spectral_centroid_hz": 1023.2
+        },
+        {
+          "time": 7.709,
+          "pitch_hz": 135.4,
+          "rms_energy": 0.2143,
+          "speaking_rate_wpm": 117.5,
+          "is_pause": false,
+          "spectral_centroid_hz": 1026.1
+        },
+        {
+          "time": 7.732,
+          "pitch_hz": 135.5,
+          "rms_energy": 0.2202,
+          "speaking_rate_wpm": 118.8,
+          "is_pause": false,
+          "spectral_centroid_hz": 1027.1
+        },
+        {
+          "time": 7.755,
+          "pitch_hz": 135.6,
+          "rms_energy": 0.2202,
+          "speaking_rate_wpm": 120.2,
+          "is_pause": false,
+          "spectral_centroid_hz": 1028.5
+        },
+        {
+          "time": 7.779,
+          "pitch_hz": 135.7,
+          "rms_energy": 0.2004,
+          "speaking_rate_wpm": 121.6,
+          "is_pause": false,
+          "spectral_centroid_hz": 1027.9
+        },
+        {
+          "time": 7.802,
+          "pitch_hz": 135.7,
+          "rms_energy": 0.1681,
+          "speaking_rate_wpm": 123.0,
+          "is_pause": false,
+          "spectral_centroid_hz": 1028.8
+        },
+        {
+          "time": 7.825,
+          "pitch_hz": 135.8,
+          "rms_energy": 0.1264,
+          "speaking_rate_wpm": 124.5,
+          "is_pause": false,
+          "spectral_centroid_hz": 1103.1
+        },
+        {
+          "time": 7.848,
+          "pitch_hz": 135.9,
+          "rms_energy": 0.0623,
+          "speaking_rate_wpm": 126.0,
+          "is_pause": false,
+          "spectral_centroid_hz": 1497.0
+        },
+        {
+          "time": 7.872,
+          "pitch_hz": 135.1,
+          "rms_energy": 0.0503,
+          "speaking_rate_wpm": 127.6,
+          "is_pause": false,
+          "spectral_centroid_hz": 1822.0
+        },
+        {
+          "time": 7.895,
+          "pitch_hz": 135.1,
+          "rms_energy": 0.125,
+          "speaking_rate_wpm": 129.2,
+          "is_pause": false,
+          "spectral_centroid_hz": 1153.8
+        },
+        {
+          "time": 7.918,
+          "pitch_hz": 135.2,
+          "rms_energy": 0.1771,
+          "speaking_rate_wpm": 130.8,
+          "is_pause": false,
+          "spectral_centroid_hz": 1033.8
+        },
+        {
+          "time": 7.941,
+          "pitch_hz": 135.2,
+          "rms_energy": 0.2133,
+          "speaking_rate_wpm": 132.5,
+          "is_pause": false,
+          "spectral_centroid_hz": 1021.7
+        },
+        {
+          "time": 7.964,
+          "pitch_hz": 135.2,
+          "rms_energy": 0.2387,
+          "speaking_rate_wpm": 134.2,
+          "is_pause": false,
+          "spectral_centroid_hz": 1022.4
+        },
+        {
+          "time": 7.988,
+          "pitch_hz": 135.3,
+          "rms_energy": 0.24,
+          "speaking_rate_wpm": 136.0,
+          "is_pause": false,
+          "spectral_centroid_hz": 1023.0
+        },
+        {
+          "time": 8.011,
+          "pitch_hz": 135.4,
+          "rms_energy": 0.236,
+          "speaking_rate_wpm": 137.8,
+          "is_pause": false,
+          "spectral_centroid_hz": 1023.5
+        },
+        {
+          "time": 8.034,
+          "pitch_hz": 135.4,
+          "rms_energy": 0.2359,
+          "speaking_rate_wpm": 139.7,
+          "is_pause": false,
+          "spectral_centroid_hz": 1023.7
+        },
+        {
+          "time": 8.057,
+          "pitch_hz": 135.5,
+          "rms_energy": 0.2398,
+          "speaking_rate_wpm": 141.6,
+          "is_pause": false,
+          "spectral_centroid_hz": 1024.2
+        },
+        {
+          "time": 8.081,
+          "pitch_hz": 135.6,
+          "rms_energy": 0.2438,
+          "speaking_rate_wpm": 143.6,
+          "is_pause": false,
+          "spectral_centroid_hz": 1025.3
+        },
+        {
+          "time": 8.104,
+          "pitch_hz": 135.6,
+          "rms_energy": 0.2443,
+          "speaking_rate_wpm": 145.6,
+          "is_pause": false,
+          "spectral_centroid_hz": 1026.3
+        },
+        {
+          "time": 8.127,
+          "pitch_hz": 135.7,
+          "rms_energy": 0.2436,
+          "speaking_rate_wpm": 147.7,
+          "is_pause": false,
+          "spectral_centroid_hz": 1026.9
+        },
+        {
+          "time": 8.15,
+          "pitch_hz": 135.7,
+          "rms_energy": 0.2386,
+          "speaking_rate_wpm": 124.8,
+          "is_pause": false,
+          "spectral_centroid_hz": 1027.1
+        },
+        {
+          "time": 8.173,
+          "pitch_hz": 135.8,
+          "rms_energy": 0.2174,
+          "speaking_rate_wpm": 126.7,
+          "is_pause": false,
+          "spectral_centroid_hz": 1026.9
+        },
+        {
+          "time": 8.197,
+          "pitch_hz": 135.8,
+          "rms_energy": 0.1842,
+          "speaking_rate_wpm": 128.6,
+          "is_pause": false,
+          "spectral_centroid_hz": 1027.4
+        },
+        {
+          "time": 8.22,
+          "pitch_hz": 135.9,
+          "rms_energy": 0.1419,
+          "speaking_rate_wpm": 130.5,
+          "is_pause": false,
+          "spectral_centroid_hz": 1069.5
+        },
+        {
+          "time": 8.243,
+          "pitch_hz": 135.9,
+          "rms_energy": 0.0827,
+          "speaking_rate_wpm": 132.5,
+          "is_pause": false,
+          "spectral_centroid_hz": 1343.5
+        },
+        {
+          "time": 8.266,
+          "pitch_hz": 136.0,
+          "rms_energy": 0.0278,
+          "speaking_rate_wpm": 134.6,
+          "is_pause": false,
+          "spectral_centroid_hz": 3259.9
+        }
+      ]
+    }
+  },
+  "flaws": [],
+  "warnings": []
+}

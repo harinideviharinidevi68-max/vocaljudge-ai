@@ -1,0 +1,111 @@
+{
+  "version": "1.0.0",
+  "last_updated": "2026-10-13T15:32:34.012705+00:00",
+  "total_records": 5,
+  "records": [
+    {
+      "recording_id": "rec_sample_ref_001",
+      "transcript_id": "txt_living_expression_01",
+      "reference_id": null,
+      "audio_file": "sample_reference.wav",
+      "transcript": "We must remember that speech is not mere words, but the living expression of thought and character.",
+      "speech_category": "Persuasive Oratory",
+      "recording_type": "ideal",
+      "flaw_type": "none",
+      "severity": "none",
+      "speaker_id": "spk_master_orator",
+      "start": null,
+      "end": null,
+      "alignment_method": "acoustic_dtw",
+      "annotation_status": "verified",
+      "metadata": {
+        "duration_seconds": 8.29,
+        "target_wpm": 138,
+        "condition": "Ideal dynamic reference baseline"
+      }
+    },
+    {
+      "recording_id": "rec_sample_fast_002",
+      "transcript_id": "txt_living_expression_01",
+      "reference_id": "rec_sample_ref_001",
+      "audio_file": "sample_fast_delivery.wav",
+      "transcript": "We must remember that speech is not mere words, but the living expression of thought and character.",
+      "speech_category": "Persuasive Oratory",
+      "recording_type": "flawed",
+      "flaw_type": "excessive_speaking_rate",
+      "severity": "high",
+      "speaker_id": "spk_contestant_02",
+      "start": 2.8,
+      "end": 4.5,
+      "alignment_method": "acoustic_dtw",
+      "annotation_status": "verified",
+      "metadata": {
+        "duration_seconds": 7.05,
+        "target_wpm": 195,
+        "condition": "Rapid rushed phrasing over climax"
+      }
+    },
+    {
+      "recording_id": "rec_sample_pause_003",
+      "transcript_id": "txt_living_expression_01",
+      "reference_id": "rec_sample_ref_001",
+      "audio_file": "sample_excessive_pause.wav",
+      "transcript": "We must remember that speech is not mere words, but the living expression of thought and character.",
+      "speech_category": "Persuasive Oratory",
+      "recording_type": "flawed",
+      "flaw_type": "excessive_pause",
+      "severity": "high",
+      "speaker_id": "spk_contestant_03",
+      "start": 3.2,
+      "end": 5.6,
+      "alignment_method": "acoustic_dtw",
+      "annotation_status": "verified",
+      "metadata": {
+        "duration_seconds": 10.09,
+        "pause_duration_seconds": 2.45,
+        "condition": "Extended hesitation silence after comma"
+      }
+    },
+    {
+      "recording_id": "rec_sample_mono_004",
+      "transcript_id": "txt_living_expression_01",
+      "reference_id": "rec_sample_ref_001",
+      "audio_file": "sample_monotone_pitch.wav",
+      "transcript": "We must remember that speech is not mere words, but the living expression of thought and character.",
+      "speech_category": "Persuasive Oratory",
+      "recording_type": "flawed",
+      "flaw_type": "reduced_pitch_variation",
+      "severity": "medium",
+      "speaker_id": "spk_contestant_04",
+      "start": 0.0,
+      "end": 6.8,
+      "alignment_method": "acoustic_dtw",
+      "annotation_status": "verified",
+      "metadata": {
+        "duration_seconds": 8.29,
+        "condition": "Flat uninflected pitch contour"
+      }
+    },
+    {
+      "recording_id": "rec_sample_slow_005",
+      "transcript_id": "txt_living_expression_01",
+      "reference_id": "rec_sample_ref_001",
+      "audio_file": "sample_slow_delivery.wav",
+      "transcript": "We must remember that speech is not mere words, but the living expression of thought and character.",
+      "speech_category": "Persuasive Oratory",
+      "recording_type": "flawed",
+      "flaw_type": "unusually_slow_delivery",
+      "severity": "medium",
+      "speaker_id": "spk_contestant_05",
+      "start": 0.0,
+      "end": 9.5,
+      "alignment_method": "acoustic_dtw",
+      "annotation_status": "verified",
+      "metadata": {
+        "duration_seconds": 11.76,
+        "target_wpm": 92,
+        "condition": "Sluggish drawn-out delivery"
+      }
+    }
+  ]
+}
