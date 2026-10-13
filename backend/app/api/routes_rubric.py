@@ -1,5 +1,5 @@
 from fastapi import APIRouter
-from backend.app.schemas.rubric import RubricConfig
+from app.schemas.rubric import RubricConfig
 
 router = APIRouter(prefix="/rubric")
 
