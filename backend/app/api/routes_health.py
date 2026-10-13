@@ -1,6 +1,6 @@
 from fastapi import APIRouter
 from app.core.config import settings
-from backend.app.services.storage_service import storage_service
+from app.services.storage_service import storage_service
 from backend.app.dataset.manager import dataset_manager
 
 router = APIRouter()
