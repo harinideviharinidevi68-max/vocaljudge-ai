@@ -1,7 +1,7 @@
 from fastapi import APIRouter
 from typing import List
-from backend.app.schemas.analysis import AnalysisHistoryItem
-from backend.app.services.storage_service import storage_service
+from app.schemas.analysis import AnalysisHistoryItem
+from app.services.storage_service import storage_service
 
 router = APIRouter(prefix="/history")
 
