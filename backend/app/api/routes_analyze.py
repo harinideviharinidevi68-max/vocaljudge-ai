@@ -1,9 +1,9 @@
 from fastapi import APIRouter, HTTPException
-from backend.app.schemas.analysis import AnalysisRequest, AnalysisResult
-from backend.app.services.analysis_service import analysis_service
-from backend.app.services.storage_service import storage_service
-from backend.app.audio_processing.loader import AudioLoadError
-from backend.app.core.logging import logger
+from app.schemas.analysis import AnalysisRequest, AnalysisResult
+from app.services.analysis_service import analysis_service
+from app.services.storage_service import storage_service
+from app.audio_processing.loader import AudioLoadError
+from app.core.logging import logger
 
 router = APIRouter()
 
