@@ -1,15 +1,15 @@
 from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
-from backend.app.core.config import settings
-from backend.app.core.logging import logger
-from backend.app.api.routes_health import router as health_router
-from backend.app.api.routes_audio import router as audio_router
-from backend.app.api.routes_transcribe import router as transcribe_router
-from backend.app.api.routes_analyze import router as analyze_router
-from backend.app.api.routes_dataset import router as dataset_router
-from backend.app.api.routes_rubric import router as rubric_router
-from backend.app.api.routes_history import router as history_router
+from app.core.config import settings
+from app.core.logging import logger
+from app.api.routes_health import router as health_router
+from app.api.routes_audio import router as audio_router
+from app.api.routes_transcribe import router as transcribe_router
+from app.api.routes_analyze import router as analyze_router
+from app.api.routes_dataset import router as dataset_router
+from app.api.routes_rubric import router as rubric_router
+from app.api.routes_history import router as history_router
 
 app = FastAPI(
     title=settings.PROJECT_NAME,
