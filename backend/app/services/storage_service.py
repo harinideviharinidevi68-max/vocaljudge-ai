@@ -4,7 +4,7 @@ import uuid
 import shutil
 from pathlib import Path
 from typing import List, Optional, Dict, Any, Tuple
-from backend.app.core.config import settings
+from app.core.config import settings
 from backend.app.core.logging import logger
 from backend.app.schemas.audio import AudioMetadata
 from backend.app.schemas.analysis import AnalysisResult, AnalysisHistoryItem
