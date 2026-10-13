@@ -1,5 +1,5 @@
 from fastapi import APIRouter
-from backend.app.core.config import settings
+from app.core.config import settings
 from backend.app.services.storage_service import storage_service
 from backend.app.dataset.manager import dataset_manager
 
